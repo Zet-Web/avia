@@ -1,0 +1,73 @@
+@use 'styles' as *;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.container h1 {
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 24px;
+  line-height: 34px;
+  color: $color-light-black;
+  margin-bottom: 28px;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.inputContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input {
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-light-black;
+}
+.options {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.options span {
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 12px;
+  line-height: 16px;
+}
+.keepLogged {
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-medium-grey;
+
+  span {
+    margin-right: 8px;
+  }
+}
+.active {
+  color: $color-space-blue;
+}
+.forgotPassword {
+  color: $color-medium-grey;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.searchButton {
+  // margin-top: 10px;
+  width: 100%;
+  padding-block: 12px;
+}

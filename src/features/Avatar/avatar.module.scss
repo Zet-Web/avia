@@ -1,0 +1,38 @@
+@use 'styles' as *;
+
+.avatar {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.bgWhite {
+  svg path {
+    fill: $color-space-blue;
+  }
+}
+
+.avatarName {
+  background-color: $color-medium-grey;
+  color: $color-white;
+  font-weight: $fw-semibold;
+  font-size: 16px;
+}
+
+.avatarBig {
+  width: 65px;
+  height: 65px;
+  font-size: 40px;
+
+  svg {
+    width: 35px;
+    height: 35px;
+  }
+}

@@ -1,0 +1,87 @@
+@use 'styles' as *;
+
+.commonList {
+  font-family: $font-Inter;
+  font-size: 18px;
+  font-weight: $fw-medium;
+  line-height: 26px;
+  text-align: left;
+
+  color: $color-space-blue;
+  text-decoration: underline;
+
+  list-style-type: none;
+
+  padding: 0;
+  margin-bottom: 50px;
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  @include mobile {
+    font-family: $font-Inter;
+    font-size: 14px;
+    font-weight: $fw-medium;
+    line-height: 20px;
+
+    margin: 0 0 40px 0;
+  }
+}
+
+.privacyListCommon,
+.privacyList {
+  list-style-type: none;
+  color: $color-light-black;
+
+  padding: 0;
+  margin: 0;
+}
+
+.privacyList {
+  margin-bottom: 50px;
+}
+
+.privacyListTitle {
+  font-family: $font-Montserrat;
+  font-size: 24px;
+  font-weight: $fw-bold;
+  line-height: 30px;
+  text-align: left;
+
+  margin-bottom: 25px;
+
+  @include mobile {
+    font-size: 18px;
+    font-weight: $fw-bold;
+    line-height: 26px;
+    text-align: left;
+
+    margin-bottom: 20px;
+  }
+}
+.privacyListText {
+  font-family: $font-Inter;
+  font-size: 14px;
+  font-weight: $fw-medium;
+  line-height: 20px;
+  text-align: left;
+
+  margin-bottom: 15px;
+
+  a {
+    color: $color-space-blue;
+    text-decoration: underline;
+  }
+  span {
+    font-family: $font-Inter;
+    font-size: 14px;
+    font-weight: $fw-bold;
+    line-height: 20px;
+    text-align: left;
+
+    float: left;
+
+    margin-right: 5px;
+  }
+}

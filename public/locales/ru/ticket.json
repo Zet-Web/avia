@@ -1,0 +1,23 @@
+{
+  "businessClass": "Бизнес",
+  "economClass": "Эконом",
+  "ticketModalTitle": "Немного терпения, переходим на сайт",
+  "price1person": "цена за 1 взрослого",
+  "priceFor": "цена за",
+  "passengers": {
+    "1": "пассажира",
+    "2": "пассажиров"
+  },
+  "on": "на",
+  "changePriceModalTitle": "Авторизуйтесь, чтобы следить за изменением цен",
+  "sellerLinkError": "Извините ссылка не найдена",
+  "handLuggageIncluded": "ручная кладь включена",
+  "handLuggageNotIncluded": "ручная кладь не включена",
+  "handLuggageNotFound": "нет информации о ручной клади",
+  "luggageIncluded": "багаж включён",
+  "luggageNotIncluded": "багаж не включён",
+  "luggageNotFound": "нет информации о багаже",
+  "loadMore": "Загрузить еще",
+  "tickets": "билетов",
+  "searchTicketLoadingTitle": "Подбираем билеты для Вас"
+}

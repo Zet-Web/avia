@@ -1,0 +1,30 @@
+@use 'styles' as *;
+
+.container {
+  width: 100%;
+  min-height: 200px;
+  padding-top: 50px;
+  position: relative;
+}
+
+.clearMargin {
+  padding-top: 20px;
+  background-color: $color-bright-grey;
+}
+
+.searchTicketsHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: $color-space-blue;
+}
+.wrapperSearchTickets {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 73px 0 20px;
+}
+.searchTickets {
+  width: 100%;
+}

@@ -1,0 +1,63 @@
+@use 'styles' as *;
+
+.body {
+  padding: 30px 50px;
+  max-width: 450px;
+
+  @include big-tablet {
+    padding: 30px;
+  }
+  @include mobile-tablet {
+    padding: 30px 25px;
+  }
+  @include mobile {
+    max-width: none;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include big-tablet {
+    gap: 50px;
+  }
+}
+.container h1 {
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  color: $color-light-black;
+  font-size: 24px;
+  line-height: 30px;
+}
+.button {
+  width: 175px;
+  height: 50px;
+  padding: 15px 20px;
+
+  @include big-tablet {
+    width: 195px;
+  }
+  @include mobile-tablet {
+    width: 100%;
+  }
+}
+.login {
+  font-weight: $fw-bold;
+}
+.register {
+  background: #ffffff;
+  text-decoration: underline;
+  color: $color-medium-grey;
+
+  &:hover {
+    background-color: $color-light-grey;
+  }
+}
+@include mobile-tablet {
+  .buttonRow {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}

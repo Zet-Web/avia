@@ -1,0 +1,105 @@
+@use 'styles' as *;
+
+.ticket {
+  @include shadow-input;
+  border-radius: 4px 0 0 4px;
+  background: $color-white;
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+
+  @include mobile {
+    flex-direction: column;
+  }
+  @include mobile-big-tablet {
+    max-width: none;
+  }
+  @include mobile {
+    max-height: none;
+  }
+}
+
+.info {
+  padding: 16px;
+
+  width: 100%;
+
+  @include mobile {
+    padding-bottom: 33px;
+  }
+}
+
+.price {
+  min-width: 176px;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid $color-light-grey;
+
+  @include big-tablet {
+    width: 160px;
+  }
+
+  @include mobile {
+    max-height: 50px;
+    width: 100%;
+    flex-direction: row;
+    border-top: 1px solid $color-light-grey;
+  }
+}
+
+.baggage {
+  display: flex;
+  height: 50px;
+  border-bottom: 1px solid $color-light-grey;
+
+  @include mobile {
+    min-width: 50%;
+  }
+}
+
+.body {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.sum {
+  @include heading3;
+  text-align: center;
+}
+
+.detailsBtn {
+  width: 100%;
+  max-height: 36px;
+  border-radius: 0 0 4px;
+  @include mobile {
+    display: none;
+  }
+}
+.detailsBtnMobile {
+  width: 100%;
+
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}
+.detailsOverlay {
+  div[class*='modalContainer'] {
+    width: 100%;
+  }
+  button[class*='closeBtn'] {
+    margin-right: 15px;
+    padding: 0;
+  }
+}

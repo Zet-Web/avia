@@ -1,0 +1,68 @@
+@use 'styles' as *;
+
+.radioWrapper {
+  padding: 8px 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $color-medium-grey;
+  cursor: pointer;
+  fill: $color-medium-grey;
+  background: $color-light-grey;
+  border-top: 0;
+  border-left: 0;
+  user-select: none;
+  border: none;
+  border-radius: 0 4px 0 0;
+
+  &:hover {
+    color: $color-space-blue;
+    fill: $color-space-blue;
+  }
+
+  &.active {
+    background: $color-white;
+    border-right-color: $color-white;
+    cursor: default;
+    .radioText {
+      color: $color-space-blue;
+    }
+    .radioIcon {
+      fill: $color-space-blue;
+    }
+  }
+
+  @include mobile {
+    border-radius: 0;
+  }
+}
+
+.handBaggage {
+  height: 20px;
+  svg {
+    height: 20px;
+    width: 40px;
+  }
+}
+.baggage {
+  height: 20px;
+  svg {
+    height: 20px;
+    width: 40px;
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.radioText {
+  font-size: 10px;
+  white-space: nowrap;
+  font-family: $font-Inter;
+  line-height: 14px;
+  font-weight: $fw-medium;
+}

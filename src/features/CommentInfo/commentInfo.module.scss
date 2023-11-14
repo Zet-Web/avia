@@ -1,0 +1,74 @@
+@use 'styles' as *;
+
+.commentWrapper {
+  margin-top: 20px;
+  padding-bottom: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid $color-light-grey;
+}
+
+.commentButton {
+  max-width: 210px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.commentAmount {
+  @include heading3;
+}
+
+.likeButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: $color-medium-grey;
+}
+
+.likeButton:hover {
+  .likeIcon {
+    fill: $color-medium-blue;
+  }
+  .likeAmount {
+    color: $color-medium-blue;
+  }
+}
+
+.likeButtonActive {
+  .likeIcon {
+    fill: $color-space-blue;
+  }
+  .likeAmount {
+    color: $color-space-blue;
+  }
+}
+
+.likeAmount {
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: $color-medium-grey;
+}
+
+.likeIcon {
+  fill: $color-medium-grey;
+}

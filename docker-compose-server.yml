@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  application:
+    image: $CI_REGISTRY_IMAGE/${SERVICE}:${VERSION}
+    container_name: ${SERVICE}
+    restart: unless-stopped
+    # command: 
+    environment:
+      - VERSION=$VERSION
+      - SERVICE=$SERVICE
+    env_file:
+      - ${APP_ENV}
+    networks:
+      -  gateway
+    labels:
+      - "traefik.enable=true"
+
+      - "traefik.http.routers.${SERVICE}-web-secured.rule=Host(`${DOMEN}`)"
+      - "traefik.http.routers.${SERVICE}-web-secured.tls.certresolver=mytlschallenge"
+      - "traefik.http.routers.${SERVICE}-web-secured.tls=true"
+      - "traefik.http.routers.${SERVICE}-web-secured.entrypoints=web-secured"
+      - "traefik.http.services.${SERVICE}-web-secured.loadbalancer.server.port=3000"
+
+networks:
+  gateway:
+    name: gateway
+    external: true

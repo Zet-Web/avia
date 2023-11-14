@@ -1,0 +1,107 @@
+@use 'styles' as *;
+
+.sideMenu {
+  width: 845px;
+  height: 100vh;
+  overflow: auto;
+  background: $color-white;
+  box-shadow: -15px 0px 15px rgba(24, 50, 115, 0.1);
+  position: fixed;
+  top: 0;
+  right: -845px;
+  bottom: 0;
+  z-index: 10;
+  transition: right 0.3s ease;
+  padding-bottom: 65px;
+
+  &.active {
+    right: 0;
+  }
+
+  @include big-tablet {
+    width: 560px;
+  }
+
+  @include tablet {
+    width: 450px;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}
+.sideMenuHead {
+  height: 68px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.sideMenuContent {
+  padding: 115px 100px 0;
+  width: 100%;
+
+  @include big-tablet {
+    padding: 115px 110px 0 80px;
+  }
+
+  @include tablet {
+    padding: 115px 39px 0 60px;
+  }
+
+  @include mobile {
+    padding: 10px 15px 0;
+  }
+}
+
+.cross {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+
+  > svg {
+    fill: $color-medium-grey;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.mobileCross {
+  display: none;
+  margin-left: auto;
+
+  .crossText {
+    margin-right: 5px;
+    color: $color-space-blue;
+    line-height: 20px;
+  }
+
+  > svg {
+    fill: $color-space-blue;
+    width: 10px;
+    height: 10px;
+  }
+
+  @include mobile {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.tabletView {
+  top: 58px;
+  bottom: unset;
+  width: 270px;
+  padding-bottom: 0;
+
+  &.active {
+    right: 39px;
+  }
+}

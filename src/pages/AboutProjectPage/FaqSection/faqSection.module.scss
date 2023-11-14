@@ -1,0 +1,166 @@
+@use 'styles' as *;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  @include container;
+  @include mobile-tablet {
+    padding: 0 39px;
+  }
+  @include mobile {
+    padding: 0 15px;
+  }
+}
+.contentTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .title {
+    font-family: $font-Montserrat;
+    font-weight: $fw-bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: $color-light-black;
+  }
+  .subtitle {
+    font-family: $font-Inter;
+    font-weight: $fw-medium;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-light-black;
+    width: 100%;
+    max-width: 570px;
+  }
+}
+.title {
+  width: 100%;
+  max-width: 400px;
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 24px;
+  padding-right: 45px;
+  line-height: 30px;
+  color: $color-light-black;
+  @include mobile-big-tablet {
+    max-width: 320px;
+  }
+}
+
+.questionBox {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @include mobile-tablet {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.questionBoxContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 770px;
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-light-black;
+
+  .bottomContent {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .bottomTitle {
+      font-family: $font-Montserrat;
+      font-style: normal;
+      font-weight: $fw-bold;
+      font-size: 18px;
+      line-height: 26px;
+    }
+    .bottomText {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: $color-light-black;
+    }
+  }
+}
+.advantagesCours {
+  display: flex;
+  gap: 110px;
+  .numberAdvantage {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 20px;
+    font-family: $font-Montserrat;
+    font-style: normal;
+    font-weight: $fw-bold;
+    font-size: 64px;
+    line-height: 80px;
+    color: $color-light-grey;
+    @media (max-width: 560px) {
+      flex-direction: row;
+      align-items: center;
+    }
+    .numberTitle {
+      font-family: $font-Montserrat;
+      font-style: normal;
+      font-weight: $fw-bold;
+      font-size: 18px;
+      line-height: 26px;
+      color: $color-space-blue;
+    }
+    .number {
+      width: 99px;
+    }
+  }
+
+  @include mobile-big-tablet {
+    gap: 0;
+    justify-content: space-between;
+  }
+  @media (max-width: 560px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.quote {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 100%;
+  background-color: $color-space-blue;
+  padding: 0 15px;
+  .logo {
+    position: absolute;
+    top: 30px;
+  }
+  .titleQuote {
+    text-align: center;
+    font-family: $font-Montserrat;
+    font-style: normal;
+    font-weight: $fw-bold;
+    font-size: 48px;
+    line-height: 60px;
+    color: $color-white;
+    @include mobile-big-tablet {
+      font-size: 36px;
+      line-height: 44px;
+    }
+    @include mobile-tablet {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}

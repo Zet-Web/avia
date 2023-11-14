@@ -1,0 +1,68 @@
+@use 'styles' as *;
+
+.bestSeller {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+  padding: 27px 16px;
+  border: 1px solid $color-light-grey;
+  border-right: none;
+  border-left: none;
+
+  @include mobile {
+    flex-wrap: wrap;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &:nth-child(2) {
+    align-items: center;
+  }
+
+  &:nth-child(3) {
+    width: 149px;
+
+    align-items: end;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+.price {
+  font-family: $font-Montserrat;
+  font-size: 24px;
+  font-weight: $fw-bold;
+  line-height: 30px;
+  text-align: left;
+}
+.sellerLogo {
+  width: 100px;
+  height: 30px;
+  position: relative;
+}
+.subTitle {
+  font-size: 12px;
+  font-family: $font-Montserrat;
+  font-weight: $fw-medium;
+  line-height: 16px;
+  text-align: left;
+  color: $color-medium-grey;
+}
+
+.button {
+  min-width: 100%;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  @include mobile {
+    height: 48px;
+    padding: 5px 0;
+  }
+}

@@ -1,0 +1,190 @@
+@use 'styles' as *;
+
+.reactCalendarComponent {
+  z-index: 1;
+  :global(.react-calendar) {
+    width: 584px !important;
+    border: 0;
+    font-family: inherit !important;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    background-color: $color-white;
+    color: $color-black;
+    border-radius: 4px;
+
+    @media (max-width: $tablet-width) {
+      width: 330px !important;
+      margin: 0 auto;
+    }
+    @include mobile {
+      width: 100% !important;
+    }
+  }
+
+  :global(.react-calendar__tile--hasActive) {
+    background: $color-space-blue;
+  }
+
+  :global(.react-calendar abbr) {
+    @include font-size(14px);
+  }
+
+  :global(.react-calendar abbr[title]) {
+    text-decoration: none;
+    color: $color-space-blue;
+    font-weight: $fw-medium;
+  }
+
+  :global(.react-calendar__month-view__days__day--weekend) {
+    color: $color-black;
+  }
+
+  :global(.react-calendar__month-view__days__day--weekend:focus) {
+    color: $color-white;
+  }
+
+  :global(.react-calendar__navigation__prev2-button) {
+    display: none;
+  }
+
+  :global(.react-calendar__navigation__next2-button) {
+    display: none;
+  }
+
+  :global(.react-calendar__tile--active:enabled:hover) {
+    background: $color-space-blue;
+    color: $color-white;
+  }
+
+  :global(.react-calendar__tile--active:enabled:focus) {
+    background: $color-space-blue;
+    color: $color-white;
+  }
+
+  :global(.react-calendar__tile--active) {
+    background: $color-space-blue;
+  }
+
+  :global(.react-calendar__tile--hasActive:enabled:hover) {
+    background: $color-space-blue;
+  }
+
+  :global(.react-calendar__tile--hasActive:enabled:focus) {
+    background: $color-space-blue;
+  }
+
+  :global(.react-calendar__tile:enabled:hover) {
+    background: $color-space-blue;
+    color: $color-white;
+  }
+
+  :global(.react-calendar__tile:enabled:focus) {
+    background: $color-space-blue;
+    color: $color-white;
+  }
+
+  :global(.react-calendar__tile--now) {
+    background: $color-space-blue;
+    font-weight: $fw-bold;
+    color: $color-white;
+  }
+
+  :global(.react-calendar__year-view__months__month) {
+    border-radius: 2px;
+    padding: 8px;
+  }
+
+  :global(.react-calendar__decade-view__years__year) {
+    border-radius: 2px;
+    padding: 8px;
+  }
+
+  :global(.react-calendar__navigation button) {
+    font-weight: $fw-medium;
+    color: $color-light-black;
+    @include font-size(16px, 1.5);
+  }
+
+  :global(.react-calendar__navigation button:enabled:hover) {
+    background-color: #f8f8fa;
+  }
+
+  :global(.react-calendar__navigation button:enabled:focus) {
+    background-color: #f8f8fa;
+  }
+
+  :global(.react-calendar__navigation button[disabled]) {
+    background-color: #f0f0f0;
+  }
+
+  :global(.react-calendar__tile--range) {
+    background: $color-light-blue;
+    color: $color-white;
+  }
+
+  :global(.react-calendar__tile--rangeStart) {
+    border-radius: 2px 0 0 2px;
+    background: $color-space-blue;
+    color: $color-white;
+  }
+
+  :global(.react-calendar__tile--rangeEnd) {
+    border-radius: 0 2px 2px 0;
+    background: $color-space-blue;
+    color: $color-white;
+  }
+
+  :global(.react-calendar--selectRange .react-calendar__tile--hover) {
+    background: $color-space-blue;
+    color: $color-white;
+  }
+
+  :global(.react-calendar__viewContainer) {
+    @media (max-width: $tablet-width) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  :global(
+      .react-calendar__viewContainer .react-calendar__month-view
+    ) {
+    @media (max-width: $tablet-width) {
+      width: 90% !important;
+    }
+  }
+
+  :global(.react-calendar__year-view) {
+    @media (max-width: $tablet-width) {
+      width: 80% !important;
+    }
+  }
+
+  :global(.react-calendar__decade-view) {
+    @media (max-width: $tablet-width) {
+      width: 80% !important;
+    }
+  }
+
+  :global(.react-calendar__century-view) {
+    @media (max-width: $tablet-width) {
+      width: 80% !important;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: #ffffff;
+    left: 50%;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    box-shadow: 0px 4px 5px rgba(51, 51, 51, 0.1);
+    z-index: -1;
+    transform: rotate(45deg);
+  }
+}
+.tile:disabled {
+  background: none !important;
+  color: $color-medium-grey !important;
+}

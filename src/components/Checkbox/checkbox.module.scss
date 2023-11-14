@@ -1,0 +1,100 @@
+@use 'styles' as *;
+
+.container {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  margin: 10px 0 10px 4px;
+  cursor: pointer;
+  font-family: $font-Inter;
+  font-style: normal;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-light-black;
+}
+
+.defaultCheckbox {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.container span {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background: $color-white;
+  border: 1px solid $color-medium-grey;
+  border-radius: 2px;
+  margin-right: 5px;
+  vertical-align: sub;
+}
+
+.checkmark:after {
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.28571 9.5L0 5.17308L1.2 3.96154L4.28571 7.07692L10.8 0.5L12 1.71154L4.28571 9.5Z' fill='white'/%3E%3C/svg%3E%0A");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 2px;
+  transition: $transition;
+}
+
+.container .defaultCheckbox:checked~.checkmark {
+  border: none;
+  background: $color-white;
+}
+
+.container .defaultCheckbox~.radio {
+  border: 1px solid $color-medium-grey;
+  border-radius: 50%;
+  background: $color-white;
+  background-position: center center;
+}
+
+.container .defaultCheckbox:checked~.radio {
+  border: none;
+  border-radius: 50%;
+  background: $color-space-blue;
+  background-image: url('/assets/images/icons/check.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: $transition;
+}
+
+.checkbox:after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='8' height='8' rx='2' transform='matrix(1 0 0 -1 0 8)' fill='%23235EF5'/%3E%3C/svg%3E ");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.container .defaultCheckbox:checked~.checkbox {
+  border-color: $color-space-blue;
+  background: $color-white;
+  background-position: center center;
+  transition: $transition;
+}
+
+.container .defaultCheckbox:checked~.checkbox:after {
+  transform: translate(-50%, -50%) scale(1);
+  transition: $transition;
+}

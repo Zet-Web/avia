@@ -1,0 +1,155 @@
+@use 'styles' as *;
+
+.wrapper {
+  max-width: 570px;
+  padding: 157px 60px 45px;
+  position: relative;
+  z-index: 0;
+  color: $color-white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  overflow: hidden;
+  @include shadow-flights;
+  cursor: pointer;
+
+  @include tablet {
+    padding: 136px 50px 40px;
+  }
+  @include big-tablet {
+    padding: 136px 50px 40px;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba($color-space-blue, 0.7);
+    transition: $transition;
+  }
+
+  &Small {
+    min-width: 210px;
+    padding: 48px 20px 23px 20px;
+    color: $color-light-black;
+
+    @include mobile-tablet {
+      @include shadow-small;
+      padding: 43px 20px 18px 20px;
+    }
+    @include laptop {
+      padding: 43px 20px 18px 20px;
+    }
+
+    &::before {
+      background-color: $color-white;
+    }
+  }
+
+  &:hover {
+    color: $color-white;
+
+    &::before {
+      background-color: rgba($color-space-blue, 1);
+    }
+  }
+}
+
+.route {
+  fill: $color-white;
+  font-size: 16px;
+
+  &Small {
+    font-size: 16px;
+    fill: $color-medium-grey;
+    color: $color-medium-grey;
+    transition: $transition;
+    @include mobile-tablet {
+      margin-bottom: 3px;
+      font-size: 12px;
+      line-height: 16px;
+      fill: $color-medium-grey;
+      color: $color-medium-grey;
+    }
+    @include big-tablet {
+      margin-bottom: 3px;
+      font-size: 12px;
+      line-height: 16px;
+      fill: $color-medium-grey;
+      color: $color-medium-grey;
+    }
+  }
+}
+.arrow {
+  margin: 0 13px;
+}
+.destination {
+  @include heading1;
+  font-size: 36px;
+  line-height: 44px;
+
+  @include tablet-laptop {
+    font-size: 24px;
+    font-weight: $fw-bold;
+    line-height: 30px;
+  }
+
+  &Small {
+    font-size: 18px;
+    font-weight: $fw-bold;
+    line-height: 26px;
+    transition: $transition;
+
+    @include mobile-tablet {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    @include big-tablet {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+.price {
+  font-family: $font-Inter;
+  font-size: 24px;
+  font-weight: $fw-medium;
+  line-height: 30px;
+
+  @include big-tablet {
+    font-size: 18px;
+    font-weight: $fw-regular;
+    line-height: 26px;
+  }
+
+  &Small {
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-space-blue;
+    font-weight: $fw-medium;
+    transition: $transition;
+
+    @include mobile-tablet {
+      font-size: 14px;
+    }
+  }
+}
+
+.wrapper:hover {
+  .route,
+  .destination,
+  .price {
+    color: $color-white;
+  }
+}

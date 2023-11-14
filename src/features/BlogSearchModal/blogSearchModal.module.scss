@@ -1,0 +1,109 @@
+@use 'styles' as *;
+
+.blogSearchModal {
+  top: 64px;
+
+  @include mobile-tablet {
+    top: 50px;
+  }
+
+  div[class*='modalContainer'] {
+    height: 100%;
+    width: 100%;
+    max-width: 1270px;
+    justify-content: flex-start;
+  }
+
+  button[class*='closeBtn'] {
+    margin-top: 89px;
+    padding-right: 30px;
+
+    @include mobile {
+      margin-top: 20px;
+    }
+    @include tablet {
+      margin-top: 35px;
+    }
+  }
+}
+
+.body {
+  margin-top: 141px;
+  padding: 0 43px 0 47px;
+  max-width: 1200px;
+  background-color: inherit;
+  box-shadow: none;
+  width: 100%;
+
+  @include mobile-tablet {
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+}
+
+.content {
+  color: $color-white;
+  margin-bottom: 128px;
+
+  @include mobile-tablet {
+    margin-bottom: 60px;
+  }
+}
+
+.content h1 {
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 36px;
+  line-height: 44px;
+
+  @include mobile {
+    font-size: 30px;
+  }
+}
+
+.content p {
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 10px;
+}
+
+.search {
+  width: 100%;
+
+  border: 2px solid $color-white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  @include shadow-modal;
+}
+
+.input {
+  max-width: 1110px;
+  border: none;
+  border-radius: 0;
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-light-black;
+}
+
+.input:focus {
+  border-radius: 0;
+}
+
+.searchButton {
+  width: 160px;
+  border: none;
+  border-radius: 0;
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 17px;
+
+  @include mobile {
+    padding: 15px;
+  }
+}

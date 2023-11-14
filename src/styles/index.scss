@@ -1,0 +1,30 @@
+@import 'theme/breakpoints';
+@import 'theme/variables.scss';
+@import 'theme/colors';
+@import 'theme/fonts';
+@import 'theme/effects';
+@import 'theme/mixins';
+
+$desktop-padding: 30px;
+$tablet-padding: 39px;
+$mobile-padding: 15px;
+
+@mixin container {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+
+  padding-left: $desktop-padding;
+  padding-right: $desktop-padding;
+
+  @include tablet {
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+  }
+
+  @include mobile {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
+}
+

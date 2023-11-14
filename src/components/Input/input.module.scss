@@ -1,0 +1,85 @@
+@use 'styles' as *;
+
+.label {
+  position: relative;
+  width: 100%;
+  background-color: $color-white;
+}
+
+.text {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $color-medium-grey;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+  transform-origin: left;
+}
+
+.error {
+  color: $color-accent-red;
+}
+.input {
+  width: 100%;
+  height: 60px;
+  background: $color-white;
+
+  box-sizing: border-box;
+  border: 1px solid $color-medium-grey;
+  border-radius: 4px;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 18px 20px;
+
+  font-family: $font-Inter;
+  font-weight: $fw-bold;
+
+  &:focus {
+    width: 100%;
+    height: 60px;
+    background: $color-white;
+    box-shadow: 0 0 15px rgba(24, 50, 115, 0.1);
+    border-radius: 4px;
+    outline: none;
+    border: none;
+  }
+
+  &::placeholder {
+    color: transparent;
+  }
+  &:focus::placeholder {
+    transition: all 0.5s;
+    color: $color-medium-grey;
+    font-weight: normal;
+  }
+}
+
+.input_error {
+  border: 1px solid $color-accent-red;
+  &:focus {
+    border: 1px solid $color-accent-red;
+  }
+  & + .text {
+    top: 35%;
+  }
+}
+
+
+.input:focus + .text,
+.input:not(:placeholder-shown) + .text {
+  font-size: 10px;
+  top: 5px !important;
+  left: 15px;
+  transform: translate(0);
+
+  @include mobile-tablet {
+    top: 6px !important;
+    left: 15px;
+  }
+}

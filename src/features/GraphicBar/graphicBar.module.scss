@@ -1,0 +1,65 @@
+@use 'styles' as *;
+
+.graphicBar {
+  position: relative;
+}
+
+.graphicBarContainer {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.graphicLinear {
+  display: flex;
+  flex-direction: column-reverse;
+  transform: rotate(90deg);
+  position: absolute;
+  top: 68%;
+  margin-left: 205px;
+  width: 180px;
+  color: $color-medium-grey;
+  height: 1px;
+  background-color: $color-light-grey;
+}
+
+.graphicDate {
+  position: absolute;
+  transform: rotate(-90deg);
+  margin-bottom: 8px;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  max-width: 1200px;
+  height: 625px;
+}
+
+.graphicScroll {
+  position: relative;
+  top: -3px;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid $color-medium-grey;
+}
+
+.graphicBarContainer::-webkit-scrollbar {
+  height: 5px;
+}
+
+.graphicBarContainer::-webkit-scrollbar-thumb {
+  background-color: $color-space-blue;
+  border-radius: 10px;
+}
+
+.graphicBarContainer::-webkit-scrollbar:vertical {
+  display: none;
+}

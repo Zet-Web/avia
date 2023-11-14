@@ -1,0 +1,36 @@
+@use 'styles' as *;
+
+.resetButton,
+.resetButton:hover {
+  position: relative;
+
+  display: block;
+  padding: 0 0 0 17px;
+
+  color: $color-space-blue;
+  background-color: transparent;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    width: 12px;
+    height: 12px;
+
+    background: url('/assets/images/icons/close_blue.svg');
+  }
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.subLabel {
+  color: $color-medium-grey;
+}

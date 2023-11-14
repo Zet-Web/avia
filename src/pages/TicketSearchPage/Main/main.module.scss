@@ -1,0 +1,10 @@
+@use 'styles' as *;
+
+.main {
+  width: 100%;
+  margin-top: 8px;
+
+  @include big-laptop {
+    margin-top: 25px;
+  }
+}

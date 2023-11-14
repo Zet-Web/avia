@@ -1,0 +1,10 @@
+@use 'styles' as *;
+
+.container {
+  @include container;
+  max-width: 830px;
+
+  @include big-tablet {
+    max-width: 730px;
+  }
+}

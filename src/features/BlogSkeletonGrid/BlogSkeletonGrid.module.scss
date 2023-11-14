@@ -1,0 +1,274 @@
+@use 'styles' as *;
+
+.container,
+.containerleft {
+  list-style-type: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 272px);
+  grid-template-rows: repeat(2, 304px);
+  grid-gap: 28px;
+  grid-template-areas:
+    'l0 l1 l2 l2'
+    'l3 l4 l5 l6';
+
+  @media only screen and (min-width: 993px) and (max-width: 1230px) {
+    grid-template-columns: repeat(4, 22.1vw);
+    grid-template-rows: repeat(2, 25.98vw);
+    grid-gap: 2vw;
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+    grid-template-columns: repeat(4, 21.17vw);
+    grid-template-rows: repeat(2, 30vw);
+    grid-gap: 2vw;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(3, 27.604vw);
+    grid-template-rows: repeat(2, 39.58vw);
+    grid-gap: 2vw;
+  }
+
+  @include mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .container {
+    grid-template-areas:
+      'l0 l1 l2 l2'
+      'l3 l4 l5 l6';
+  }
+
+  .containerleft {
+    grid-template-areas:
+      'l2 l2 l0 l1'
+      'l3 l4 l5 l6';
+  }
+}
+
+@include tablet {
+  .container {
+    grid-template-areas:
+      'l0 l2 l2'
+      'l1 l3 l4';
+  }
+
+  .containerleft {
+    grid-template-areas:
+      'l2 l2 l1'
+      'l0 l3 l4';
+  }
+}
+
+.wrapper {
+  width: 100%;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageplace {
+  height: 152px;
+  width: 100%;
+  border-radius: 5px;
+
+  @include tablet {
+    height: 15.32vw;
+    width: 100%;
+  }
+
+  @include mobile {
+    height: 41.53vw;
+    width: 100%;
+  }
+
+}
+
+.dataplace {
+  width: 93px;
+  border-radius: 50px;
+  height: 14px;
+  margin: 12px 0 0 0;
+  line-height: 7px;
+}
+
+.titleplace {
+  width: max(254px, 59.123%);
+  border-radius: 50px;
+  height: 20px;
+  line-height: 7px;
+  margin: 10px 0 8px 0;
+}
+
+.textline1 {
+  width: max(196px, 85.439%);
+  border-radius: 50px;
+  height: 12px;
+  line-height: 7px;
+  margin: 0;
+}
+
+.textline2 {
+  width: max(190px, 82.982%);
+  border-radius: 50px;
+  height: 12px;
+  line-height: 7px;
+  margin: 0;
+}
+
+.textline3 {
+  width: max(190px, 90.351%);
+  border-radius: 50px;
+  height: 12px;
+  line-height: 7px;
+  margin: 0;
+}
+
+.textline4 {
+  width: max(190px, 88.772%);
+  border-radius: 50px;
+  height: 12px;
+  line-height: 7px;
+  margin: 0;
+}
+
+.tagplace {
+  position: absolute;
+  width: 97px;
+  height: 36px;
+  background-color: $color-white;
+  border-radius: 5px;
+  z-index: 2;
+  margin: 16px 0 0 16px;
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1230px) {
+
+
+  .imageplace {
+    height: 13vw;
+    width: 100%;
+  }
+
+  .dataplace {
+    width: 7.95vw;
+  }
+
+  .titleplace {
+    width: max(20.65vw, 59.123%);
+  }
+
+  .textline1 {
+    width: max(16.75vw, 85.439%);
+  }
+
+  .textline2 {
+    width: max(16.239vw, 82.982%);
+  }
+
+  .textline3 {
+    width: max(16.239vw, 90.351%);
+  }
+
+  .textline4 {
+    width: max(16.41vw, 88.772%);
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+
+  .imageplace {
+    height: 15.32vw;
+    width: 100%;
+  }
+
+  .dataplace {
+    width: 10.072vw;
+  }
+
+  .titleplace {
+    width: max(21.15vw, 59.123%);
+  }
+
+  .textline1 {
+    width: max(19.75vw, 93.77%);
+  }
+
+  .textline2 {
+    width: max(19.133vw, 91.11%);
+  }
+
+  .textline3 {
+    width: max(16.239vw, 99.11%);
+  }
+
+  .textline4 {
+    width: max(16.41vw, 97.33%);
+  }
+}
+
+@media only screen and (min-width: 366px) and (max-width: 768px) {
+
+  .dataplace {
+    width: 10.072vw;
+  }
+
+  .titleplace {
+    width: max(21.15vw, 59.123%);
+  }
+
+  .textline1 {
+    width: max(19.75vw, 93.77%);
+  }
+
+  .textline2 {
+    width: max(19.133vw, 91.11%);
+  }
+
+  .textline3 {
+    width: max(16.239vw, 99.11%);
+  }
+
+  .textline4 {
+    width: max(16.41vw, 97.33%);
+  }
+}
+
+@media only screen and (max-width: 365px) {
+
+  .block0,
+  .block1,
+  .block2 {
+    height: 98.7vw;
+  }
+
+  .dataplace {
+    width: 10.072vw;
+  }
+
+  .titleplace {
+    width: max(21.15vw, 59.123%);
+  }
+
+  .textline1 {
+    width: max(19.75vw, 93.77%);
+  }
+
+  .textline2 {
+    width: max(19.133vw, 91.11%);
+  }
+
+  .textline3 {
+    width: max(16.239vw, 99.11%);
+  }
+
+  .textline4 {
+    width: max(16.41vw, 97.33%);
+  }
+}

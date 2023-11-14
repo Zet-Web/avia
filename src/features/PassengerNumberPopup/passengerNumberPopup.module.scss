@@ -1,0 +1,60 @@
+@use 'styles' as *;
+
+.wrapper {
+  position: absolute;
+  top: 60px;
+  z-index: 110;
+  width: 250px;
+  height: 240px;
+  width: 100%;
+  margin-top: 9px;
+  padding: 17px 20px 15px;
+
+  border-radius: 4px;
+  background: $color-white;
+  &::before {
+    content: '';
+    position: absolute;
+    background: $color-white;
+    left: 125px;
+    top: -3px;
+    width: 10px;
+    height: 10px;
+    box-shadow: 0px 4px 5px rgba($color-black, 0.1);
+    z-index: -1;
+    transform: rotate(45deg);
+  }
+  &::before {
+    z-index: 1;
+    box-shadow: none;
+  }
+  hr {
+    min-width: 250px;
+    margin-top: 8px;
+    margin-bottom: 17px;
+    margin-left: -20px;
+    border: 1px solid $color-light-grey;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.description {
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+}
+.title {
+  @include font-size(10, $lh: 0.1);
+}
+.subtitle {
+  @include font-size(6, $lh: 0.1);
+
+  color: $color-medium-grey;
+}
+
+.tripClass {
+  display: block;
+}

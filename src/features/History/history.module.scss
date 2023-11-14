@@ -1,0 +1,61 @@
+@use 'styles' as *;
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @include mobile-tablet {
+    justify-content: space-between;
+  }
+}
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.title {
+  display: none;
+  margin-right: auto;
+
+  @include heading1;
+
+  @include mobile-tablet {
+    display: block;
+  }
+}
+
+.clearHistory {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  align-items: center;
+  color: $color-space-blue;
+  cursor: pointer;
+  margin-bottom: 6px;
+
+  span {
+    font-family: $font-Inter;
+    font-weight: $fw-medium;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.cross {
+  margin-left: 6px;
+  line-height: 0;
+  svg {
+    stroke: $color-space-blue;
+  }
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  color: $color-medium-grey;
+  @include mobile-tablet {
+    margin-top: 20px;
+  }
+}

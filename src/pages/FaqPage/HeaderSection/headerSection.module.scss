@@ -1,0 +1,28 @@
+@use 'styles' as *;
+
+.container {
+  @include container;
+  max-width: 830px;
+
+  @include big-tablet {
+    max-width: 730px;
+  }
+}
+
+.title {
+  margin-bottom: 5px;
+  @include heading1;
+}
+
+.description {
+  max-width: 500px;
+  margin-bottom: 45px;
+  @include text-regular;
+  color: $color-medium-grey;
+}
+
+.link {
+  color: $color-space-blue;
+
+  border-bottom: 1px solid $color-space-blue;
+}

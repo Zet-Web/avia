@@ -1,0 +1,35 @@
+@use 'styles' as *;
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: $color-light-black;
+}
+.content p {
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+}
+.content h1 {
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+.editIcon {
+  cursor: pointer;
+}

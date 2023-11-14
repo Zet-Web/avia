@@ -1,0 +1,21 @@
+{
+  "title": "Календарь низких цен",
+  "roundTrip": "Туда - обратно",
+  "oneWay": "В одну сторону",
+  "vacation": "Продолжительность отпуска",
+  "months": {
+    "january": "Январь",
+    "february": "Февраль",
+    "march": "Март",
+    "april": "Апрель",
+    "may": "Май",
+    "june": "Июнь",
+    "july": "Июль",
+    "august": "Август",
+    "september": "Сентябрь",
+    "october": "Октябрь",
+    "november": "Ноябрь",
+    "december": "Декабрь"
+  },
+  "directionButton": "Поехали"
+}

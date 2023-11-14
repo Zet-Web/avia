@@ -1,0 +1,29 @@
+@use 'styles' as *;
+
+.transfer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  color: $color-space-blue;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: $fw-bold;
+  line-height: 20px;
+  text-align: left;
+
+  span {
+    color: $color-medium-grey;
+    font-weight: $fw-medium;
+  }
+}
+.flightTimeline {
+  font-size: 12px;
+  font-weight: $fw-medium;
+  line-height: 16px;
+  text-align: left;
+  max-width: 120px;
+  width: 100%;
+}

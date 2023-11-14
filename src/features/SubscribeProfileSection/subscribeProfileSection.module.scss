@@ -1,0 +1,78 @@
+@use 'styles' as *;
+
+.container {
+  div[class*='tabs_content'] {
+    margin-top: 17px;
+  }
+  div[class*='tabs_tabs'] {
+    margin: 0;
+  }
+}
+.subscribeTitle {
+  display: none;
+
+  @include mobile-big-tablet {
+    display: block;
+    font-family: $font-Montserrat;
+    font-weight: $fw-bold;
+    color: $color-light-black;
+  }
+  @include big-tablet {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 30px;
+  }
+  @include mobile-tablet {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+}
+.tabContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.tabContainer .content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contentItem {
+  div[class*='container'] {
+    margin: 0;
+  }
+}
+.clearHistory {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  align-items: center;
+  color: $color-space-blue;
+  cursor: pointer;
+  margin-bottom: 17px;
+
+  span {
+    font-family: $font-Inter;
+    font-weight: $fw-medium;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.cross {
+  margin-left: 8px;
+  width: 10px;
+  height: 10px;
+  fill: $color-space-blue;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  color: $color-medium-grey;
+  @include mobile-tablet {
+    margin-top: 20px;
+  }
+}

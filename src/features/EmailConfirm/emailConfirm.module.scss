@@ -1,0 +1,45 @@
+@use 'styles' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.content h1 {
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: $color-light-black;
+}
+.content p {
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-light-black;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.emailConfirmForm {
+  width: 100%;
+}
+.inputContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input {
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-light-black;
+}
+.confirmButton {
+  margin-top: 15px;
+  width: 100%;
+}

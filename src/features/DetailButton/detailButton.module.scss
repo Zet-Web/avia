@@ -1,0 +1,56 @@
+@use 'styles' as *;
+
+.detail,
+.question,
+.about {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: $color-medium-blue;
+  color: $color-white;
+  border-radius: 0 5px 5px 0;
+  font-family: $font-Inter;
+  font-size: 14px;
+  font-weight: $fw-medium;
+  line-height: 20px;
+  cursor: pointer;
+  border: 2px solid transparent;
+
+  @include tablet {
+    height: 36px;
+    border-radius: 0 0 5px 5px;
+  }
+  @include mobile {
+    border-radius: 0 0 5px 5px;
+  }
+}
+.question {
+  padding: 15px 20px;
+  border-radius: 0 4px 4px 0;
+}
+.about {
+  padding: 7px 15px;
+  border-radius: 0;
+}
+.isOpened {
+  background-color: $color-white;
+  border: 2px solid $color-medium-blue;
+  color: $color-medium-blue;
+}
+.arrow {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-left: 9px;
+  transition: 0.2s;
+  transform: rotate(-180deg);
+}
+
+.arrowDown {
+  transform: rotate(0deg);
+  svg {
+    fill: $color-white;
+  }
+}

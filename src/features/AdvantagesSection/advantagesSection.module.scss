@@ -1,0 +1,174 @@
+@use 'styles' as *;
+
+.wrapper {
+  padding: 50px 0;
+  background-color: $color-space-blue;
+
+  @include mobile-tablet {
+    padding: 40px 0;
+  }
+
+  @include big-tablet {
+    padding: 50px 0;
+  }
+
+  & > .description {
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.container {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @include mobile-tablet {
+    padding: 0 15px;
+  }
+}
+
+.title {
+  @include heading1;
+  color: $color-white;
+  margin-bottom: 18px;
+}
+
+.description {
+  display: block;
+  margin: 0;
+  margin-bottom: 15px;
+
+  @include text-regular;
+  line-height: 20px;
+  color: $color-bright-blue;
+
+  @include mobile-tablet {
+    width: 210px;
+  }
+
+  @include mobile-tablet {
+    width: 325px;
+    height: 40px;
+  }
+
+  @include mobile {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 11px;
+  }
+}
+
+.cardsWrapper {
+  height: 380px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+
+  @include big-tablet {
+    gap: 30px;
+  }
+
+  @include tablet {
+    gap: 30px;
+  }
+}
+
+.card {
+  height: 100%;
+
+  @include big-tablet {
+    max-width: 230px;
+  }
+
+  @include tablet {
+    max-width: 235px;
+    height: 400px;
+  }
+
+  @include mobile {
+    max-width: 310px;
+    min-height: 350px;
+  }
+}
+
+.cardImageContainer {
+  min-height: 228px;
+  margin-bottom: 22px;
+
+  @include big-tablet {
+    min-height: 228px;
+    margin-bottom: 6px;
+  }
+
+  @include tablet {
+    min-height: 228px;
+    margin-bottom: 11px;
+  }
+
+  @include mobile {
+    max-width: 345px;
+  }
+}
+
+.cardImage {
+  max-width: 300px;
+
+  @include big-tablet {
+    max-width: 240px;
+  }
+
+  @include tablet {
+    max-width: 235px;
+  }
+}
+
+.card:first-child {
+  .cardTitle {
+    max-width: 100px;
+
+    @include tablet {
+      max-width: 200px;
+    }
+
+    @include mobile {
+      max-width: 300px;
+    }
+  }
+}
+
+.card:nth-child(2) {
+  .cardTitle {
+    max-width: 210px;
+  }
+}
+
+.cardTitle {
+  display: inline-block;
+  margin-bottom: 10px;
+  min-height: 60px;
+
+  @include heading2;
+  line-height: 30px;
+  color: $color-white;
+
+  @include tablet {
+    min-height: 30px;
+    width: 130px;
+  }
+
+  @include mobile {
+    min-height: 30px;
+  }
+}
+
+.cardDescription {
+  margin: 0 auto;
+
+  line-height: 20px;
+  @include text-regular;
+  color: $color-bright-blue;
+}

@@ -1,0 +1,86 @@
+@use 'styles' as *;
+
+.container {
+  @include container;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.select {
+  width: 50%;
+}
+
+.button {
+  width: fit-content;
+}
+
+.h1 {
+  @include heading1;
+}
+
+.h2 {
+  @include heading2;
+}
+
+.h3 {
+  @include heading3;
+  padding-bottom: 10px;
+}
+
+.text {
+  @include text-regular;
+  padding-bottom: 10px;
+}
+
+.textSmall {
+  @include text-small;
+  padding-bottom: 10px;
+}
+
+.checkbox:after {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url('/assets/images/icons/checkMark.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background: $color-space-blue;
+  border-radius: 2px;
+  transform: translate(-50%, -50%) scale(0);
+}
+.checkbox2:after {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url('/assets/images/icons/checkMarkBlue.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background: $color-white;
+  border-radius: 2px;
+  transform: translate(-50%, -50%) scale(0);
+}
+.customInput {
+  width: 100%;
+  font-family: $font-Montserrat;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+  height: 48px;
+  margin-top: 30px;
+  text-indent: 15px;
+}
+
+.customPlaceholder {
+  padding: 0 0 0 20px;
+}

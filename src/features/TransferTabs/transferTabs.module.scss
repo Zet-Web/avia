@@ -1,0 +1,93 @@
+@use 'styles' as *;
+
+.direction {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.directionTab {
+  display: flex;
+  align-items: center;
+  padding: 0 0 10px 0;
+  flex: 1 1;
+  cursor: pointer;
+  position: relative;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid $color-medium-grey;
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.icon {
+  margin-right: 30px;
+  fill: $color-medium-grey;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.content {
+  text-align: start;
+  @include mobile {
+    text-align: center;
+  }
+}
+.type {
+  color: $color-medium-grey;
+  font-size: 16px;
+  font-weight: $fw-medium;
+  font-family: $font-Montserrat;
+}
+
+.price {
+  color: $color-medium-grey;
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.active {
+  border-bottom: 2px solid $color-space-blue;
+
+  &::after {
+    position: absolute;
+    width: 100%;
+    content: '';
+    height: 3px;
+    bottom: 0;
+    left: 0;
+  }
+
+  .icon {
+    fill: $color-space-blue;
+  }
+
+  .price {
+    color: $color-space-blue;
+  }
+
+  .type {
+    color: $color-space-blue;
+    font-weight: $fw-bold;
+  }
+}
+
+.content {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.skeleton {
+  line-height: 0.1;
+}

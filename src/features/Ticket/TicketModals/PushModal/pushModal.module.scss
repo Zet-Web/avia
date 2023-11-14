@@ -1,0 +1,54 @@
+@use 'styles' as *;
+
+.form {
+  display: none;
+}
+
+.overlay {
+  background: $color-space-blue;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 300px;
+  padding: 20px;
+}
+.loadingIcon {
+  animation-name: rotation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg) scale(-1, 1);
+  }
+  100% {
+    transform: rotate(-360deg) scale(-1, 1);
+  }
+}
+.title {
+  font-size: 16px;
+  font-weight: $fw-regular;
+  text-align: center;
+  margin: 40px;
+
+  span {
+    font-size: 16px;
+    font-weight: $fw-bold;
+    text-align: center;
+  }
+}
+.logo {
+  width: 170px;
+  img {
+    width: 100%;
+  }
+}

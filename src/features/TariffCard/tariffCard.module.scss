@@ -1,0 +1,78 @@
+@use 'styles' as *;
+
+.cardWrapper {
+  width: 283.33px;
+  margin-right: 16px;
+
+  padding: 16px;
+  background: $color-white;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: $transition;
+  @include shadow-input;
+  border-radius: 5px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.cardWrapper:hover {
+  border: 1px solid $color-bright-blue;
+}
+
+.cardHeader {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.isChecked {
+  border: 1px solid $color-space-blue;
+  transition: $transition;
+}
+
+.title {
+  font-family: $font-Inter;
+  font-size: 14px;
+  font-weight: $fw-bold;
+  line-height: 20px;
+}
+
+.price {
+  font-family: $font-Montserrat;
+  font-size: 24px;
+  font-weight: $fw-bold;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.description {
+  font-family: $font-Inter;
+  font-size: 12px;
+  font-weight: $fw-regular;
+  line-height: 16px;
+  color: $color-medium-grey;
+}
+
+.radio {
+  margin: -6px -5px 0 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  font-family: $font-Inter;
+  font-size: 12px;
+  font-weight: $fw-regular;
+  line-height: 16px;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.icon {
+  margin-right: 4px;
+}

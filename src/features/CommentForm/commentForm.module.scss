@@ -1,0 +1,115 @@
+@use 'styles' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 670px;
+}
+
+.header {
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  font-weight: $fw-bold;
+
+  @include tablet {
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  @include mobile {
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.title {
+  color: $color-light-black;
+  font-family: $font-Montserrat;
+  font-size: 24px;
+  line-height: 30px;
+
+  @include mobile {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.appeal {
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-medium-grey;
+}
+
+.name {
+  text-decoration: underline;
+}
+
+.textarea {
+  margin-bottom: 15px;
+  padding-top: 18px;
+  padding-left: 20px;
+
+  width: 100%;
+  min-height: 150px;
+
+  border: 1px solid $color-medium-grey;
+
+  resize: none;
+
+  @include mobile {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.textareaActive {
+  font-weight: $fw-regular;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-light-black;
+}
+
+.textAreaPlaceholder {
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-medium-grey;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+
+  @include tablet {
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  @include mobile {
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.btnClose,
+.btnClose:hover {
+  background-color: $color-white;
+  color: $color-space-blue;
+}

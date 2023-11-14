@@ -1,0 +1,17 @@
+{
+  "example-page": {
+    "test": "test de"
+  },
+  "words": {
+    "add": "hinzufügen",
+    "click": "klicken",
+    "ok": "ok",
+    "and": "oder"
+  },
+  "inputs": {
+    "email": "Email",
+    "password": "Passwort",
+    "name": "Name",
+    "surname": "Nachname"
+  }
+}

@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /tickets/
+
+User-Agent: Yandex
+Disallow: /tickets/

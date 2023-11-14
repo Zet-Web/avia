@@ -1,0 +1,202 @@
+@use 'styles' as *;
+
+.wrapper {
+  width: 670px;
+  height: 138px;
+  margin-bottom: 15px;
+  background-color: $color-white;
+  display: flex;
+  box-shadow: 0px 0px 15px 0px $box-shadow-alert;
+  line-height: 0.1;
+  border-radius: 0;
+  @include mobile {
+    height: 203px;
+    flex-direction: column;
+    width: 91vw;
+  }
+}
+
+.leftContainer {
+  height: 100%;
+  width: calc(100% - 176px);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include mobile {
+    height: 154px;
+    width: 100%;
+  }
+}
+.leftContainerTop,
+.airlinesPlace,
+.iconsPlace,
+.leftContainerBottom,
+.leftContainerMiddle,
+.leftContainerTimeBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftContainerTop {
+  height: 20px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.leftContainerMiddle {
+  height: 16px;
+  width: 100%;
+}
+.leftContainerTimeBlock {
+  width: 100%;
+  height: 18px;
+}
+
+.timeBlockCenter {
+  width: 96px;
+  height: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.hr {
+  align-items: center;
+  display: flex;
+  margin-top: 2px;
+}
+.leftContainerMiddleCenter {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.leftContainerBottom {
+  height: 8px;
+  width: 100%;
+}
+.airlinesPlace {
+  width: 64px;
+  height: 100%;
+}
+.iconsPlace {
+  width: 61px;
+  height: 100%;
+}
+
+.rightContainer {
+  height: 100%;
+  width: 176px;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid $color-light-grey;
+  @include mobile {
+    height: 49px;
+    width: 100%;
+    border-top: 1px solid $color-light-grey;
+    border-left: none;
+  }
+}
+.typePlace {
+  width: 100%;
+  height: 34.78%;
+  display: flex;
+  @include mobile {
+    height: 100%;
+    width: 50%;
+  }
+}
+.typePlaceLeft,
+.typePlaceRight {
+  width: 50%;
+  height: 100%;
+  line-height: 0.1;
+}
+.typePlaceLeftBlock,
+.typePlaceRightBlock {
+  width: 52px;
+  height: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.typePlaceLeft {
+  border-bottom: 1px solid $color-light-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.typePlaceRightContainer {
+  width: 88px;
+  height: 48px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  @include mobile {
+    height: 49px;
+    width: 22.75vw;
+  }
+}
+.typePlaceRightTop {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: $color-white;
+}
+.typePlaceRightBottom {
+  width: 52px;
+  height: 8px;
+  border-radius: 50px;
+  background-color: $color-white;
+}
+
+.pricePlace {
+  width: 100%;
+  height: 36.24%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mobile {
+    display: none;
+  }
+}
+.morePlace {
+  width: 100%;
+  height: 28.98%;
+  @include mobile {
+    display: none;
+  }
+}
+.morePlaceLinePlace {
+  width: 176px;
+  height: 40px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.morePlaceLine {
+  width: 72px;
+  height: 8px;
+  background-color: $color-white;
+  border-radius: 50px;
+  z-index: 3;
+}
+.listWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.filterListItem {
+  width: 100%;
+  padding: 4px;
+}
+.listSkeleton {
+  margin-left: 5px;
+}

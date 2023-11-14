@@ -1,0 +1,82 @@
+@use 'styles' as *;
+
+.panel {
+  @include mobile-tablet {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    padding-bottom: 7px;
+    overflow-x: scroll;
+  }
+
+  @include mobile {
+    justify-content: space-between;
+  }
+}
+
+@include mobile-tablet {
+  .panelWrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .panelButtonNotify {
+    min-width: 100%;
+    width: 355px;
+  }
+
+  .panelButton {
+    background-color: $color-quaternary-blue;
+    color: $color-medium-blue;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 34px 8px 62px;
+    white-space: nowrap;
+    margin-right: 15px;
+
+    &:active {
+      color: $color-white;
+    }
+
+    &:hover {
+      color: $color-white;
+    }
+
+    @include mobile {
+      padding: 10px 18px 10px 40px;
+    }
+  }
+
+  .panelIcon {
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    margin-left: 35px;
+
+    @include mobile {
+      margin-left: 15px;
+    }
+  }
+
+  .panelIconNotify {
+    margin-left: 105px;
+
+    @include mobile {
+      position: static;
+      margin-left: 0;
+    }
+  }
+}
+
+@include mobile {
+  .panelWrapNotify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 12px;
+    border-radius: 4px;
+    background-color: $color-quaternary-blue;
+  }
+}

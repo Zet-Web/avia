@@ -1,0 +1,38 @@
+@use 'styles' as *;
+
+.wrapper {
+ // margin-right: 70px;
+
+  @include big-tablet {
+  //  margin-right: 50px;
+  }
+
+  @include tablet {
+   // margin-right: 30px;
+  }
+
+  @include mobile {
+   // margin-top: 20px;
+    padding: 0;
+    margin-right: auto;
+  }
+}
+
+.socialList {
+  width: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 17.5px;
+  list-style: none;
+  justify-content: space-between;
+
+  @media (max-width: 700px) {
+    //max-width: 600px;
+    width: 100%;
+    flex-direction: row;
+    gap: 25px;
+    padding: 10px 20px;
+    @include shadow-input;
+  }
+}

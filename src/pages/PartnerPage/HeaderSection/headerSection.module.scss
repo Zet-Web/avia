@@ -1,0 +1,49 @@
+@use 'styles' as *;
+
+.headerSection {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  height: 530px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 31px;
+  @include big-tablet {
+    padding: 0 39px;
+  }
+  @include mobile-tablet {
+    padding: 15px;
+  }
+  @include mobile {
+    padding: 50px 15px;
+    flex-direction: column-reverse;
+  }
+}
+.headerText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 470px;
+  @include mobile-tablet {
+    max-width: 338px;
+  }
+}
+
+.headerTitle {
+  font-family: $font-Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: $color-light-black;
+}
+.headerSubtitle {
+  font-family: $font-Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-medium-grey;
+}

@@ -1,0 +1,84 @@
+@use 'styles' as *;
+
+.body {
+  width: 100%;
+}
+
+.flight {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 19px;
+}
+
+.flightEnd {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.flightStart {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.flightTime {
+  @include heading2;
+  line-height: 30px;
+}
+
+.flightDate {
+  @include text-small;
+  color: $color-medium-grey;
+  white-space: nowrap;
+  line-height: 16px;
+  font-family: $font-Montserrat;
+}
+
+.places {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flightPlace {
+  width: max-content;
+  max-width: 170px;
+  @include text-small;
+  line-height: 16px;
+  font-family: $font-Montserrat;
+  @media (max-width: 630px) {
+    left: 0;
+
+    width: min-content;
+  }
+}
+
+.flightPlaceStart {
+  text-align: left;
+}
+
+.flightPlaceEnd {
+  text-align: right;
+}
+
+.flightTimeline {
+  max-width: 320px;
+  padding-bottom: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  @include text-small;
+  color: $color-medium-grey;
+  text-align: center;
+}
+
+.price {
+  width: 184px;
+  @include mobile {
+    display: flex;
+  }
+}

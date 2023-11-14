@@ -1,0 +1,63 @@
+@use 'styles' as *;
+
+.wrapper {
+  padding: 70px 0;
+
+  @include tablet {
+    padding: 102px 0;
+  }
+
+  @include mobile {
+    padding: 50px 0;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  @include container;
+
+  @include mobile {
+    flex-direction: column-reverse;
+  }
+}
+.image {
+  width: 540px;
+  height: 390px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 500px;
+
+  @include mobile-tablet {
+    max-width: 338px;
+    margin-top: 30px;
+  }
+}
+
+.content h1 {
+  font-family: $font-Montserrat;
+  font-style: normal;
+  font-weight: $fw-bold;
+  font-size: 36px;
+  line-height: 44px;
+  color: $color-light-black;
+}
+.content p {
+  margin-top: 15px;
+  font-family: $font-Inter;
+  font-style: normal;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-medium-grey;
+
+  @include mobile-tablet {
+    max-width: 338px;
+  }
+}

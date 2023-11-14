@@ -1,0 +1,105 @@
+@use 'styles' as *;
+.container {
+  max-width: 1200px;
+  padding: 50px 30px 70px;
+  margin: 0 auto;
+
+  position: relative;
+
+  @include laptop {
+    padding: 50px 30px;
+  }
+  @include big-tablet {
+    padding: 50px 39px;
+  }
+  @include mobile-tablet {
+    padding: 30px 15px;
+  }
+}
+.content {
+  margin-bottom: 50px;
+  margin-left: 85px;
+  max-width: 320px;
+
+  @include mobile-laptop {
+    margin-left: 0;
+  }
+
+  @include mobile-tablet {
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+}
+.content h1 {
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 36px;
+  line-height: 44px;
+  color: $color-light-black;
+
+  @include mobile-tablet {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+.content p {
+  margin-top: 15px;
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-medium-grey;
+
+  @include mobile-tablet {
+    margin-top: 10px;
+  }
+}
+.swiperContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 80px;
+}
+.swiper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 970px;
+  cursor: pointer;
+}
+
+// .slide:first-child {
+//   div[class*='wrapper'] {
+//     max-width: 370px;
+//   }
+// }
+
+.buttonPrev {
+  position: absolute;
+  top: 47%;
+  left: 30px;
+  z-index: 10;
+  cursor: pointer;
+
+  path {
+    fill: $color-medium-grey;
+  }
+
+  @include mobile-laptop {
+    display: none;
+  }
+}
+
+.buttonNext {
+  position: absolute;
+  top: 47%;
+  right: 30px;
+  z-index: 10;
+  cursor: pointer;
+
+  @include mobile-laptop {
+    display: none;
+  }
+}

@@ -1,0 +1,82 @@
+@use 'styles' as *;
+
+.errorPage {
+  background-color: $color-space-blue;
+  width: 100%;
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px 55px;
+
+  @include big-tablet-laptop {
+    padding: 40px 0px 65px;
+  }
+
+  @include mobile-tablet {
+    padding: 20px 15px 40px;
+  }
+}
+
+.image {
+  margin-bottom: 20px;
+
+  svg {
+    width: 560px;
+    height: 470px;
+
+    @include big-tablet {
+      width: 440px;
+      height: 370px;
+    }
+
+    @include mobile-tablet {
+      width: 239px;
+      height: 200px;
+    }
+  }
+}
+
+.title {
+  font-family: $font-Montserrat;
+  font-size: 36px;
+  font-weight: $fw-bold;
+  line-height: 44px;
+  margin-bottom: 15px;
+
+  @include mobile-tablet {
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+  }
+}
+
+.subTitle {
+  font-family: $font-Inter;
+  font-size: 14px;
+  font-weight: $fw-medium;
+  line-height: 20px;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.buttonBack {
+  font-family: $font-Inter;
+  font-size: 14px;
+  font-weight: $fw-medium;
+  line-height: 20px;
+  color: $color-bright-blue;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    transform: rotate(180deg);
+    margin-right: 10px;
+    fill: $color-bright-blue;
+  }
+
+  &:active {
+    outline: none;
+  }
+}

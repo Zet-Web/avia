@@ -1,0 +1,48 @@
+@use 'styles' as *;
+
+.slider {
+  width: 100%;
+  cursor: pointer;
+}
+
+.thumb {
+  position: absolute;
+  top: -50%;
+  transform: translateY(-50%);
+
+  width: 23px;
+  height: 23px;
+  border: 1px solid $color-light-grey;
+
+  background: $color-white;
+  @include shadow-input;
+  border-radius: 30px;
+  outline: none;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 11px;
+    width: 11px;
+    border-radius: 100%;
+
+    content: '';
+    background-color: $color-space-blue;
+  }
+}
+
+.track {
+  position: relative;
+  border: 1px solid $color-medium-grey;
+
+  &:nth-child(2) {
+    position: absolute;
+    top: -50%;
+    transform: translateY(-50%);
+    border: 0;
+    border-bottom: 3px solid $color-space-blue;
+  }
+}

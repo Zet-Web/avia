@@ -1,0 +1,52 @@
+@use 'styles' as *;
+
+.wrapper {
+  position: fixed;
+  bottom: -50%;
+  right: 0;
+  left: 0;
+  z-index: 99999;
+
+  padding: 35px 0;
+
+
+  box-shadow: 0px -15px 15px rgba(24, 50, 115, 0.1);
+  background: $color-white;
+
+  animation: slideUp 1s ease forwards;
+}
+
+.container {
+  @include container;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.text {
+  max-width: 570px;
+}
+
+.btn {
+  flex-shrink: 0;
+}
+
+@include mobile {
+  .container {
+    flex-wrap: wrap;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    bottom: -50%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}

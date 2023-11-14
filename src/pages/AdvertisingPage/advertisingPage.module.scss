@@ -1,0 +1,128 @@
+@use 'styles' as *;
+
+.wrapper {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.headerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 80px;
+  @include mobile {
+    margin-top: 50px;
+  }
+  .headerTitle {
+    font-family: $font-Montserrat;
+    font-style: normal;
+    font-weight: $fw-bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: $color-light-black;
+    @include mobile {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+  .headerSubtitle {
+    font-family: $font-Inter;
+    font-style: normal;
+    font-weight: $fw-medium;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color-space-grey;
+  }
+}
+
+.priceInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.itemSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .itemTitle {
+    font-family: $font-Montserrat;
+    font-style: normal;
+    font-weight: $fw-bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: $color-light-black;
+  }
+  .content {
+    background: $color-white;
+    box-shadow: 0px 0px 15px $color-transparent-black;
+    border-radius: 4px;
+  }
+  .itemContent {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-light-grey;
+    }
+    @include mobile-big-tablet {
+      gap: 50px;
+    }
+    @include mobile-tablet {
+      gap: 20px;
+      padding-right: 22px;
+    }
+    @media (max-width: 675px) {
+      flex-direction: column;
+    }
+    .item {
+      width: 100%;
+      max-width: 280px;
+      font-family: $font-Montserrat;
+      font-style: normal;
+      font-weight: $fw-bold;
+      font-size: 18px;
+      line-height: 26px;
+      color: $color-space-blue;
+
+      @include mobile-big-tablet {
+        max-width: 185px;
+      }
+
+      @include mobile-tablet {
+        max-width: 122px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      @include mobile {
+        max-width: fit-content;
+      }
+    }
+    .textItem {
+      width: 100%;
+      max-width: 350px;
+      font-family: $font-Inter;
+      font-style: normal;
+      font-weight: $fw-medium;
+      font-size: 14px;
+      line-height: 20px;
+      color: $color-space-grey;
+    }
+    .priceItem {
+      width: 100%;
+      max-width: 162px;
+      font-family: $font-Montserrat;
+      font-style: normal;
+      font-weight: $fw-bold;
+      font-size: 18px;
+      line-height: 26px;
+      color: $color-light-black;
+    }
+  }
+}
+
+.feedbackForm {
+  margin: 70px 0;
+}

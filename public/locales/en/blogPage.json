@@ -1,0 +1,11 @@
+{
+  "commentSection": {
+    "comments": "комментария",
+    "placeholder": "Введите текст комментария...",
+    "loadMore": "загрузить еще 10 комментариев"
+  },
+  "recommendSection": {
+    "title": "Recommendations",
+    "subtitle": "Interesting, and sometimes useful, to read before you travel!"
+  }
+}

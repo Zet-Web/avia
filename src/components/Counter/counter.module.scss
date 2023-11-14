@@ -1,0 +1,42 @@
+@use 'styles' as *;
+
+.wrapper {
+  width: fit-content;
+  display: flex;
+  align-items: stretch;
+
+  border-radius: 2px;
+  border: 1px solid $color-medium-blue;
+  overflow: hidden;
+}
+
+.input {
+  width: 35px;
+  height: 30px;
+
+  @include text-regular;
+  text-align: center;
+
+  background: $color-white;
+  border: 1px solid $color-medium-blue;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.btn {
+  width: 30px;
+  height: 30px;
+
+  font-size: 14px;
+  color: $color-white;
+
+  background: $color-medium-blue;
+  border: 0;
+  cursor: pointer;
+
+  &:disabled {
+    color: $color-medium-grey;
+
+    background: $color-white;
+  }
+}

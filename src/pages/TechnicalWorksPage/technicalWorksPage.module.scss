@@ -1,0 +1,93 @@
+@use 'styles' as *;
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-space-blue;
+  padding: 50px 0;
+  @include big-tablet-laptop {
+    padding: 40px 0px 60px;
+  }
+
+  @include mobile-tablet {
+    padding: 20px 15px 40px;
+  }
+}
+
+.image {
+  @include big-tablet-laptop {
+    max-width: 441px;
+    max-height: 370px;
+  }
+  @include mobile-tablet {
+    max-width: 239px;
+    max-height: 200px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 580px;
+
+  @include mobile-tablet {
+    max-width: 345px;
+  }
+}
+.content h2 {
+  margin-top: 20px;
+  font-family: $font-Montserrat;
+  font-style: normal;
+  font-weight: $fw-bold;
+  font-size: 36px;
+  line-height: 44px;
+  color: $color-white;
+
+  @include mobile-tablet {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+.content p {
+  margin-top: 20px;
+  font-family: $font-Inter;
+  font-style: normal;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-white;
+
+  @include mobile-tablet {
+    margin-top: 10px;
+  }
+}
+.redirect {
+  margin-top: 20px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+
+  @include mobile-tablet {
+    margin-top: 15px;
+  }
+}
+
+.redirect span {
+  margin-left: 10px;
+  font-family: $font-Inter;
+  font-style: normal;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-bright-blue;
+}

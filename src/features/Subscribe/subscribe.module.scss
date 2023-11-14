@@ -1,0 +1,106 @@
+@use 'styles' as *;
+
+.subscribe {
+  width: 100%;
+  min-height: 361px;
+  background-color: $color-space-blue;
+
+  @include big-tablet {
+    padding-top: 50px;
+  }
+  @include mobile-tablet {
+    padding: 40px 0;
+  }
+}
+
+.subscribeWrapper {
+  max-width: 1030px;
+  padding: 50px 0 70px 30px;
+  @include container;
+}
+
+.title {
+  @include font-size(36px);
+  color: $color-white;
+  margin-bottom: 15px;
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  @include mobile {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.text {
+  @include font-size(14px);
+  color: $color-bright-blue;
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+}
+
+.subscribeForm {
+  margin-top: 41px;
+  display: flex;
+  border: 2px solid $color-white;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 770px;
+  background-color: $color-white;
+  @include tablet {
+    width: 100%;
+  }
+  @include mobile {
+    width: 100%;
+
+    margin-top: 21px;
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 17px 20px;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  color: $color-medium-grey;
+  background-color: $color-white;
+  font-family: $font-Inter;
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.input:focus {
+  border-radius: 0;
+  height: 58px;
+}
+
+.subscribeBtn {
+  padding: 0 62px;
+  text-transform: capitalize;
+  background-color: $color-medium-blue;
+  font-family: $font-Inter;
+
+  @include tablet {
+    padding: 0 32px;
+  }
+  @include mobile {
+    padding: 0 12px;
+  }
+}
+
+.agreeInfo {
+  margin-top: 11px;
+  @include font-size(12px);
+  color: $color-bright-blue;
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+
+  @include mobile {
+    width: 300px;
+  }
+}
+
+.agreeLink {
+  text-decoration: underline;
+}

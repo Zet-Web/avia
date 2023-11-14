@@ -1,0 +1,41 @@
+@mixin heading1 {
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 36px;
+
+  @include mobile {
+    font-size: 24px;
+  }
+}
+
+@mixin heading2 {
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 24px;
+
+  @include tablet {
+    font-size: 20px;
+  }
+
+  @include mobile {
+    font-size: 20px;
+  }
+}
+
+@mixin heading3 {
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 18px;
+}
+
+@mixin text-regular {
+  font-weight: $fw-medium;
+  font-size: 14px;
+  color: $color-black;
+}
+
+@mixin text-small {
+  font-weight: $fw-medium;
+  font-size: 12px;
+  color: $color-black;
+}

@@ -1,0 +1,39 @@
+@use 'styles' as *;
+
+.wrapper {
+  border-bottom: 1px solid $color-light-grey;
+}
+
+.header {
+  width: 100%;
+
+  padding: 0;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  font-family: $font-Inter;
+  @include text-regular;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.arrow {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-left: 9px;
+  transition: 0.2s;
+  transform: rotate(-180deg);
+}
+
+.arrowDown {
+  transform: rotate(0deg);
+  svg {
+    fill: $color-white;
+  }
+}

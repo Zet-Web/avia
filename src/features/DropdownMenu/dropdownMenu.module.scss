@@ -1,0 +1,77 @@
+@use 'styles/index' as *;
+
+.root {
+  @include shadow-small;
+  @include font-size(14px);
+  width: 16.25rem;
+  background: $color-white;
+  font-weight: $fw-medium;
+}
+
+.menu {
+  padding: 20px 0 20px 21px;
+  border-bottom: 1px solid $color-medium-grey;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-space-blue;
+
+    svg {
+      fill: $color-space-blue;
+
+      path {
+        fill: $color-space-blue;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+}
+
+.activeUpMenu {
+  color: $color-space-blue;
+
+  svg {
+    fill: $color-space-blue;
+  }
+}
+
+.accordionMenu {
+  padding: 20px 0 20px 21px;
+}
+
+.icon {
+  margin-right: 1rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: $fw-bold;
+  @include font-size(14px);
+  border: none;
+  background: none;
+  height: fit-content;
+  color: $color-accent-red;
+  cursor: pointer;
+}
+.iconLogout {
+  width: 14px;
+  height: 14px;
+  background: url('../../../public/assets/images/e.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}

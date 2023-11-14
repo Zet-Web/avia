@@ -1,0 +1,143 @@
+@use 'styles' as *;
+
+.root {
+  @include shadow-modal;
+  position: relative;
+  background: $color-white;
+  width: 100%;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid $color-white;
+    top: -5px;
+    left: 65px;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+
+.cityButton {
+  color: $color-black;
+  display: flex;
+  width: 100%;
+  text-align: start;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 20px;
+
+  &:hover {
+    color: $color-white;
+
+    background: $color-space-blue;
+  }
+}
+
+.cityAbbreviation {
+  right: 10px;
+  color: $color-medium-grey !important;
+  margin: 0 !important;
+}
+
+.noAirports {
+  padding: 0 20px;
+  font-size: 13px !important;
+  color: $color-medium-grey !important;
+}
+
+.dropDownMenu {
+  top: 30px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.dropDownMenuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  svg {
+    fill: $color-space-blue;
+  }
+
+  &:hover {
+    background-color: $color-space-blue;
+    cursor: pointer;
+    color: $color-white;
+
+    .cityAbbreviation {
+      color: $color-light-blue;
+    }
+
+    .transportText {
+      color: $color-white;
+    }
+
+    svg {
+      fill: $color-light-blue;;
+    }
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: $color-space-blue;
+  }
+}
+
+.iconAndText{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.transportText {
+  margin: 0 !important;
+  color: inherit;
+}
+
+.textButtonContainer{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between
+}
+
+.dropdown ul {
+  border-top: 1px solid $color-light-grey;
+}
+
+.dropdown:not(:first-child) button {
+  border-top: 1px solid $color-light-grey;
+}
+
+.pointDepartureText {
+  width: 80%;
+
+  margin: 20px 0;
+
+  align-self: center;
+
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.active:hover {
+  background-color: $color-space-blue;
+  cursor: pointer;
+  color: $color-white;
+  & > p {
+    color: $color-white;
+  }
+}

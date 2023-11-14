@@ -1,0 +1,168 @@
+@use 'styles' as *;
+
+.container {
+  @include container;
+}
+
+.title {
+  margin-bottom: 40px;
+
+  @include heading1;
+}
+
+.columns {
+  display: flex;
+
+  @include mobile-big-tablet {
+    flex-direction: column;
+  }
+}
+
+.or {
+  position: relative;
+
+  max-width: 170px;
+  width: 100%;
+  height: 16px;
+
+  margin: 0 30px 0 60px;
+
+  @include big-laptop-desktop {
+    margin: 40px 70px 0 -25px;
+  }
+
+  @include mobile-big-tablet {
+    margin: 30px 0;
+  }
+
+  @include mobile {
+    margin: 38px auto;
+  }
+
+  text-align: center;
+  color: $color-medium-grey;
+
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 12px;
+
+    width: 30px;
+    height: 1px;
+
+    @include big-laptop-desktop {
+      width: 45px;
+    }
+
+    @include mobile {
+      width: 107px;
+    }
+
+    background: $color-light-grey;
+  }
+
+  &::before {
+    left: 0;
+
+    @include mobile {
+      left: -75px;
+    }
+  }
+
+  &::after {
+    right: 0;
+    @include mobile {
+      right: -75px;
+    }
+  }
+}
+
+.leftColumn {
+  width: 100%;
+  max-width: 260px;
+
+  @include big-laptop-desktop {
+    max-width: 370px;
+  }
+
+  @include mobile-big-tablet {
+    max-width: 100%;
+    display: flex;
+    gap: 30px;
+  }
+
+  @include mobile-tablet {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.rightColumn {
+  width: 100%;
+  max-width: 570px;
+
+  @include mobile-big-tablet {
+    max-width: 100%;
+    display: flex;
+    gap: 30px;
+  }
+
+  @include mobile-tablet {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.text {
+  max-width: 370px;
+
+  margin: 0;
+  margin-bottom: 30px;
+
+  @include text-regular;
+
+  @include mobile-big-tablet {
+    max-width: 270px;
+    margin: 0;
+  }
+}
+
+.contactName {
+  font-family: $font-Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  color: $color-space-blue;
+}
+
+.contactValue {
+  font-size: 18px;
+}
+
+.form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: stretch;
+}
+
+.inputWrapper {
+  width: 64%;
+
+  margin-bottom: 15px;
+
+  @include mobile-tablet {
+    width: 100%;
+  }
+}
+
+.input {
+  font-weight: $fw-medium;
+}
+
+.textArea {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,85 @@
+@use 'styles' as *;
+
+.errorPage {
+  background-color: $color-space-blue;
+  width: 100%;
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px 130px;
+
+  @include laptop {
+    padding: 40px 20px 120px;
+  }
+
+  @include big-tablet {
+    padding: 40px 20px 130px;
+  }
+
+  @include mobile-tablet {
+    padding: 40px 15px 75px;
+  }
+}
+
+.image {
+  margin-bottom: 40px;
+
+  svg {
+    width: 510px;
+    height: 430px;
+
+    @include big-tablet-laptop {
+      width: 415px;
+      height: 350px;
+    }
+
+    @include mobile-tablet {
+      width: 250px;
+      height: 210px;
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
+}
+
+.title {
+  font-family: $font-Montserrat;
+  font-size: 36px;
+  font-weight: $fw-bold;
+  line-height: 44px;
+  margin-bottom: 22px;
+
+  @include mobile-tablet {
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+  }
+
+  @include mobile {
+    margin-bottom: 17px;
+  }
+}
+
+.buttonBack {
+  font-family: $font-Inter;
+  font-size: 14px;
+  font-weight: $fw-medium;
+  line-height: 20px;
+  color: $color-bright-blue;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    transform: rotate(180deg);
+    margin-right: 10px;
+    fill: $color-bright-blue;
+  }
+
+  &:active {
+    outline: none;
+  }
+}

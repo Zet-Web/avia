@@ -1,0 +1,53 @@
+@use 'styles' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  @include shadow-input;
+
+  @include laptop {
+    width: 290px;
+  }
+}
+.tab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 20px;
+  border-bottom: 1px solid $color-light-grey;
+  gap: 15px;
+  cursor: pointer;
+}
+.tab:first-child {
+  border-radius: 4px 4px 0px 0px;
+}
+
+.tab:last-child {
+  border-bottom: 0;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.tabTitle {
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-light-black;
+}
+.active {
+  background: $color-space-blue;
+
+  .tabTitle {
+    font-weight: $fw-medium;
+    color: $color-white;
+  }
+  .tabIcon svg path {
+    stroke: white;
+    fill: $color-space-blue;
+  }
+}
+.tabIcon {
+  line-height: 0;
+}

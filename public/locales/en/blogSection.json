@@ -1,0 +1,18 @@
+{
+  "blog": {
+    "title": "Blog"
+  },
+  "new": {
+    "title": "New"
+  },
+  "popular": {
+    "title": "Popular"
+  },
+  "all": {
+    "title": "All"
+  },
+  "search": {
+    "title": "Search for articles"
+  },
+  "placeholder": "Country, city"
+}

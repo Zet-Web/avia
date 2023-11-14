@@ -1,0 +1,30 @@
+{
+  "example-page": {
+    "test": "test"
+  },
+  "words": {
+    "add": "add",
+    "click": "click",
+    "ok": "ok",
+    "and": "or",
+    "details": "Details",
+    "free": "free",
+    "inWay": "in way"
+  },
+  "inputs": {
+    "email": "Email",
+    "password": "Password",
+    "name": "First name",
+    "surname": "Last name"
+  },
+  "directionInput": {
+    "from": "From",
+    "to": "To"
+  },
+  "ticket": {
+    "subscribeLine1": "Subscribe to notifications about",
+    "subscribeLine2": "price changes for this ticket",
+    "addToFavorites": "Add to favorites",
+    "shareLink": "Share link"
+  }
+}

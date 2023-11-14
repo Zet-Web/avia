@@ -1,0 +1,345 @@
+@use 'styles' as *;
+
+.container {
+  position: relative;
+
+  max-width: 270px;
+  width: 100%;
+
+  @media (max-width: 931px) {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  @include mobile {
+    padding: 0 15px 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.header {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  button {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.resetButton,
+.resetButton:hover {
+  padding: 0;
+
+  color: $color-space-blue;
+  background-color: transparent;
+}
+
+.searchButton {
+  margin-top: 15px;
+}
+
+.ticketFilterForm {
+  margin-bottom: 20px;
+}
+
+.formStep {
+  padding: 8px 0;
+  //   margin-bottom: 7px;
+
+  @include mobile-big-tablet {
+    padding: 18px 0;
+  }
+
+  border-bottom: 1px solid $color-medium-grey;
+
+  button[class*='accordion_header'] {
+    margin-bottom: 0;
+  }
+
+  button[class*='checkboxGroup_resetButton'] {
+    margin-top: 10px;
+  }
+
+  &Title {
+    margin-bottom: 14px;
+
+    font-weight: 14px;
+    font-weight: $fw-bold;
+  }
+
+  &Subtitle {
+    margin-bottom: 5px;
+
+    color: $color-space-blue;
+  }
+}
+
+.variantsCount {
+  color: $color-medium-grey;
+}
+
+.rangeWrapperLarge {
+  margin-bottom: 40px;
+}
+
+.rangeWrapper {
+  margin-bottom: 32px;
+}
+
+.rangeHeader {
+  width: 100%;
+
+  margin-bottom: 15px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.fieldArray {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.direction {
+  margin-bottom: 5px;
+  @include text-small;
+  color: $color-space-blue;
+}
+
+.checkboxGroup {
+  &:not(&:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.transfer {
+  margin-bottom: 10px;
+
+  color: $color-space-blue;
+  font-weight: $fw-bold;
+}
+
+.flight {
+  padding-top: 10px;
+  margin-bottom: 10px;
+  line-height: 20px;
+  font-weight: $fw-bold;
+}
+
+.sort {
+  margin-bottom: 30px;
+
+  @include shadow-input;
+  overflow: hidden;
+
+  @include big-tablet {
+    margin: 0 -15px 15px;
+  }
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
+}
+
+.radioLabel {
+  position: relative;
+  cursor: pointer;
+}
+
+.radioLabel:hover {
+  .radioValue {
+    color: $color-white;
+    background: $color-space-blue;
+
+    @include mobile-tablet {
+      color: $color-black;
+      background: $color-white;
+    }
+  }
+}
+
+.radioInput:checked+.radioValue {
+  color: $color-white;
+  background: $color-space-blue;
+
+  @include mobile-tablet {
+    color: $color-black;
+    background: $color-white;
+  }
+}
+
+.radioInput {
+  appearance: none;
+  position: absolute;
+}
+
+.radioValue {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: $fw-medium;
+  border-top: 1px solid #eeeeee;
+  background-color: $color-white;
+  line-height: 0.1;
+}
+
+.radioLabel:first-child .radioValue {
+  border: 0;
+}
+
+.radioTitle {
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.radioPrice {
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 12px;
+  line-height: 16px;
+  opacity: 0.5;
+}
+
+.showFilter {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
+  border-radius: 50px;
+  padding: 10px 23px;
+}
+
+.submitFilter {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999999;
+  max-width: 255px;
+  width: 100%;
+}
+
+.filterModal {
+  padding: 0 15px;
+}
+
+.filter {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+
+  align-items: center;
+  justify-content: center;
+
+  background: $color-white;
+}
+
+.filterBody {
+  position: absolute;
+  top: 50px;
+
+  background: $color-white;
+  border-radius: 15px;
+
+  padding: 0 15px 60px;
+  margin-bottom: 15px;
+
+  @media (max-width: 931px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.filter.active {
+  display: flex;
+}
+
+.closeBtn {
+  position: absolute;
+  top: -37px;
+  right: 0;
+
+  display: block;
+  margin: 10px 0 10px auto;
+
+  background: none;
+  border: none;
+  outline: none;
+
+  @include mobile {
+    margin: 0;
+    padding: 0 15px 0 0;
+  }
+}
+
+.closeText {
+  margin-right: 5px;
+  margin-bottom: 1px;
+
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-space-blue;
+}
+
+.closeIcon {
+  fill: $color-space-blue;
+}
+
+.subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px;
+  margin-bottom: 16px;
+
+  font-weight: $fw-bold;
+  color: $color-space-blue;
+
+  @include shadow-input;
+
+  @include big-tablet {
+    margin: 0 -15px 16px;
+  }
+
+  @include mobile {
+    margin-bottom: 15px;
+  }
+}
+
+.subscribeIcon {
+  fill: $color-medium-grey;
+  cursor: pointer;
+}

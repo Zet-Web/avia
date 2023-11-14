@@ -1,0 +1,129 @@
+@use 'styles' as *;
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  background-color: $color-space-blue;
+  z-index: 10;
+
+  @include mobile-tablet {
+    height: 50px;
+  }
+}
+
+.container {
+  @include container;
+  //padding-right: 25px;
+
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+
+  @include big-tablet {
+    padding: 0 40px;
+  }
+}
+
+.logo {
+  svg {
+    display: block;
+
+    @include mobile {
+      width: 80px;
+      height: 18px;
+    }
+  }
+}
+
+.navList {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navItem:first-child {
+  color: $color-white;
+
+  svg {
+    margin-right: 13px;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navItem:not(:last-child) {
+  margin-right: 32px;
+}
+
+.navItem:not(:first-child) {
+  padding-left: 20px;
+  border-left: 1px solid $color-medium-blue;
+}
+
+.dropMenu {
+  position: relative;
+  padding: 0;
+  height: 100%;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.dropBtn, .dropBtnCurrency {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropBtnCurrency {
+  path {
+    fill: $color-white;
+  }
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: -100px;
+  top: 40px;
+  z-index: 2;
+}
+
+.isOpen {
+  display: block;
+}
+
+.button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.burgerMenuContainer {
+  position: absolute;
+}
+.auth {
+  cursor: pointer;
+  margin-right: -5px;
+}

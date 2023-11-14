@@ -1,0 +1,84 @@
+@use 'styles' as *;
+.priceItem {
+  max-width: 170px;
+  height: 100px;
+  background-color: $color-white;
+  border-radius: 4px;
+  border: 1px solid $color-light-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+
+  @include mobile-tablet {
+    gap: 0;
+    height: 56px;
+  }
+}
+
+.title {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  color: $color-space-blue;
+  text-align: center;
+
+  @include mobile-tablet {
+    @include font-size(12px);
+  }
+}
+
+.price {
+  font-size: 18px;
+  line-height: 26px;
+  font-family: $font-Inter;
+  font-weight: $fw-bold;
+  text-align: center;
+
+  @include mobile-tablet {
+    @include font-size(12px);
+  }
+}
+
+.bestPrice {
+  @include font-size(12px);
+  font-family: $font-Inter;
+  font-weight: $fw-bold;
+  text-align: center;
+
+  @include mobile-tablet {
+    display: none;
+  }
+}
+.bestPriceItem {
+  gap: 0;
+}
+.bestPriceItem,
+.activeItem {
+  background-color: $color-accent-green;
+  .title,
+  .price,
+  .bestPrice {
+    color: $color-white;
+  }
+}
+
+.activeItem {
+  background-color: $color-space-blue;
+}
+
+.shortenItem {
+  width: 96px;
+  height: 56px;
+  padding: 9px 3px;
+  gap: 0;
+  .title,
+  .price,
+  .bestPrice {
+    @include font-size(12px);
+    white-space: nowrap;
+  }
+}

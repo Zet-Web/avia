@@ -1,0 +1,89 @@
+@use 'styles' as *;
+
+.wrapperCompany {
+  width: 100%;
+  padding: 70px 31px;
+  @include big-tablet {
+    padding: 70 39px;
+  }
+  @include mobile-tablet {
+    padding: 49px 15px 60px;
+  }
+}
+
+.companyContent {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1170px;
+  margin: 0 auto;
+  gap: 80px;
+  @include big-tablet {
+    gap: 59px;
+  }
+  @include mobile-tablet {
+    flex-direction: column;
+  }
+}
+
+.companyText {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 470px;
+  @include mobile-big-tablet {
+    max-width: 400px;
+  }
+  
+  @include mobile-tablet {
+    max-width: 100%;
+}
+  .companyTitle {
+    font-family: $font-Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: $color-light-black;
+  }
+  .companySubtitle {
+    font-family: $font-Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-space-grey;
+  }
+}
+
+.companyCards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: 569px;
+  @include mobile-big-tablet {
+    max-width: 450px;
+  }
+  .card {
+    .cardheader {
+      display: flex;
+      gap: 31px;
+      font-family: $font-Montserrat;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+      color: $color-light-black;
+    }
+    .cardText {
+      padding-left: 61px;
+      font-family: $font-Inter;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: $color-medium-grey;
+    }
+  }
+}

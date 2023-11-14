@@ -1,0 +1,26 @@
+{
+  "loginWith": "Войти через...",
+  "email": {
+    "login": "Войти через E-Mail",
+    "registration": "Регистрация через E-Mail"
+  },
+  "tabs": {
+    "login": "Войти",
+    "registration": "Регистрация"
+  },
+  "links": {
+    "instagram": "Instagram",
+    "facebook": "Facebook"
+  },
+  "placeholders": {
+    "name": "имя",
+    "email": "e-mail",
+    "password": "пароль",
+    "repeatPassword": "повторите пароль",
+    "code": "код из письма"
+  },
+  "newPassword": "Новый пароль",
+  "regSuccess": "Ссылка для завершения регистрации отправленна на вашу почту",
+  "passChangeOnChange": "Ссылка для смены пароля отправленна на вашу почту",
+  "forgotPassword": "Забыли пароль?"
+}

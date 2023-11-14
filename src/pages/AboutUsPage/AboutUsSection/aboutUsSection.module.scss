@@ -1,0 +1,48 @@
+@use 'styles' as *;
+
+.wrapper {
+  padding: 70px 0 35px;
+  @include mobile-tablet {
+    padding: 20px 0 15px;
+  }
+}
+
+.container {
+  max-width: 1000px;
+  padding: 0 39px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include laptop {
+    padding: 0 31px;
+  }
+  @include mobile {
+    padding: 0 15px;
+  }
+}
+
+.content {
+  @include mobile-tablet {
+    width: 100%;
+  }
+}
+
+.title {
+  margin-bottom: 20px;
+
+  @include heading1;
+}
+
+.text {
+  max-width: 370px;
+  @include text-regular;
+  line-height: 1.4;
+  color: $color-space-grey;
+}
+
+.container {
+  @include mobile-tablet {
+    flex-direction: column;
+  }
+}

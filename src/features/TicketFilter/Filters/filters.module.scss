@@ -1,0 +1,97 @@
+@use 'styles' as *;
+
+@include mobile-tablet {
+  .filter {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    padding: 0 20px;
+    width: 100%;
+    overflow-y: scroll;
+    height: 100%;
+    background-color: $color-white;
+    // @include mobile-tablet {
+
+    // }
+  }
+
+  .filter.active {
+    display: block;
+  }
+
+  .ticketFilterTitle {
+    text-align: center;
+    font-size: 17px;
+    line-height: 22px;
+    position: absolute;
+    left: calc(50% - 10px);
+  }
+
+  .ticketFilterBack {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    color: $color-system-blue;
+    line-height: 22px;
+  }
+
+  .ticketFilterIcon {
+    margin-right: 5px;
+  }
+
+  .ticketFilterLabel {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+
+  .ticketFilterSubTitle {
+    margin: 20px 0;
+  }
+
+  .ticketFilterForm {
+    margin-bottom: 20px;
+  }
+
+  .formStep {
+    padding: 8px 0;
+    //   margin-bottom: 7px;
+
+    @include mobile-big-tablet {
+      padding: 18px 0;
+    }
+
+    border-bottom: 1px solid $color-medium-grey;
+
+    button[class*='accordion_header'] {
+      margin-bottom: 0;
+    }
+
+    button[class*='checkboxGroup_resetButton'] {
+      margin-top: 10px;
+    }
+
+    &Title {
+      margin-bottom: 14px;
+
+      font-weight: 14px;
+      font-weight: $fw-bold;
+    }
+
+    &Subtitle {
+      margin-bottom: 5px;
+
+      color: $color-space-blue;
+    }
+  }
+
+  .submitFilter {
+    min-width: 255px;
+    width: 100%;
+    margin-top: 20px;
+  }
+}

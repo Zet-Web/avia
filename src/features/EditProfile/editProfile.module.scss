@@ -1,0 +1,96 @@
+@use 'styles' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+
+  @include mobile-tablet {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.title h1 {
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: $color-light-black;
+
+  @include big-tablet {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+.title p {
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-accent-green;
+  margin-left: 55px;
+
+  @include big-tablet {
+    margin-left: 15px;
+  }
+
+  @include mobile-tablet {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}
+.editProfileForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.inputRow {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+
+  @include mobile-tablet {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.input {
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-light-black;
+  max-width: 370px;
+
+  @include laptop {
+    max-width: 290px;
+  }
+  @include big-tablet {
+    max-width: 330px;
+  }
+  @include mobile-tablet {
+    max-width: none;
+    width: 100%;
+  }
+}
+.saveButton {
+  width: 270px;
+  font-weight: $fw-bold;
+
+  @include laptop {
+    width: 290px;
+  }
+  @include mobile-tablet {
+    width: 100%;
+    margin-top: 5px;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "titles": {
+    "general": "Merlines | Поиск авиабилетов - Лучшие предложения на авиаперелеты",
+    "index": "Merlines | Поиск авиабилетов - Лучшие предложения на авиаперелеты",
+    "500": "Merlines | Произошла ошибка",
+    "404": "Merlines | Не найдено",
+    "aboutUs": "Merlines | О нас",
+    "aboutProject": "Merlines | О проекте",
+    "toPartners": "Merlines | Партнерам",
+    "blogs": "Merlines | Блог",
+    "tickets.search": "Merlines | Поиск билетов",
+    "tickets.loading": "Merlines | Загрузка билетов",
+    "advertising": "Merlines | Прайс-лист",
+    "faq": "Merlines | FAQ",
+    "partners": "Merlines | Партнерам",
+    "priceCalendar": "Merlines | Календарь низких цен",
+    "privacy": "Merlines | Политика конфиденциальности",
+    "profile": "Merlines | Профиль",
+    "redirect": "Merlines | Переход на другой сайт",
+    "technicalWorks": "Merlines | Технические работы"
+  },
+  "keywords": {
+    "general": "авиабилеты, поиск авиабилетов, сравнение билетов, бронирование авиабилетов, дешевые авиабилеты"
+  },
+  "descriptions": {
+    "genereal": "Поиск и сравнение авиабилетов. Найдите самые выгодные предложения на рейсы по всему миру. Бронируйте билеты онлайн по лучшим ценам."
+  }
+}

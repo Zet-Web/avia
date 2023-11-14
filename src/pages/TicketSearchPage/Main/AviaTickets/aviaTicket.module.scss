@@ -1,0 +1,13 @@
+@use 'styles' as *;
+
+.ticket {
+  margin-bottom: 15px;
+}
+.moreTicketButton {
+  margin-top: 15px;
+  width: 100%;
+
+  button {
+    width: 100%;
+  }
+}

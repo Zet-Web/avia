@@ -1,0 +1,16 @@
+@use 'styles' as *;
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 70px 31px 50px;
+
+  @include big-tablet {
+    padding: 50px 39px;
+  }
+  @include mobile-tablet {
+    padding: 30px 15px 40px;
+  }
+}

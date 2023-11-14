@@ -1,0 +1,91 @@
+@use 'styles' as *;
+
+.wrapper {
+  padding: 60px 0 160px;
+
+  @include laptop {
+    padding: 40px 0 50px;
+  }
+  @include big-tablet {
+    padding: 50px 0 70px;
+  }
+  @include mobile-tablet {
+    padding: 40px 0 30px;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1170px;
+  padding: 0 31px;
+  margin: 0 auto;
+  @include mobile-big-tablet {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  @include big-tablet {
+    padding: 0 39px;
+  }
+  @include mobile-tablet {
+    padding: 0 15px;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.content h1 {
+  font-family: $font-Montserrat;
+  font-style: normal;
+  font-weight: $fw-bold;
+  font-size: 36px;
+  line-height: 44px;
+  color: $color-light-black;
+  margin-bottom: 30px;
+  max-width: 570px;
+  @include laptop {
+    min-width: 504px;
+  }
+  @include mobile-big-tablet {
+    max-width: 504px;
+  }
+  @include mobile-tablet {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+.content p {
+  font-family: $font-Inter;
+  font-style: normal;
+  font-weight: $fw-bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-medium-grey;
+}
+.content p:last-child {
+  margin-top: 15px;
+}
+
+.image {
+  margin-top: 103px;
+
+  @include laptop {
+    margin-top: 90px;
+    max-width: 480px;
+    margin-left: -50px;
+  }
+
+  @include big-tablet {
+    max-width: 427px;
+    margin-top: 117px;
+    align-self: flex-end;
+  }
+
+  @include mobile-tablet {
+    margin-top: 110px;
+    align-self: center;
+  }
+}

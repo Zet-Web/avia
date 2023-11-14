@@ -1,0 +1,57 @@
+@use 'styles' as *;
+
+.wrapper {
+  max-width: 670px;
+  padding: 20px 0;
+  border-top: 1px solid $color-light-grey;
+  border-bottom: 1px solid $color-light-grey;
+
+  display: flex;
+  gap: 30px;
+
+  @include big-tablet {
+    max-width: 610px;
+  }
+
+  @include tablet {
+    max-width: 570px;
+  }
+
+  @include mobile {
+    max-width: 380px;
+    gap: 20px;
+  }
+}
+
+.authorBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.authorTag {
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: $color-space-blue;
+
+  @include mobile {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.authorName {
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 24px;
+  line-height: 30px;
+
+  color: $color-light-black;
+
+  @include mobile {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}

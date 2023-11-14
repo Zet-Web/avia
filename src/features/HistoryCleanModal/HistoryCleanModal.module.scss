@@ -1,0 +1,68 @@
+@use 'styles' as *;
+
+.body {
+  max-width: 410px;
+}
+
+.container {
+  padding: 28px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  @media (min-width: 768px) {
+    position: static !important;
+    transform: none;
+  }
+}
+
+.content {
+  font-size: 24px;
+  font-weight: $fw-bold;
+}
+
+.title {
+  margin-bottom: 12px;
+  text-align: left;
+  font-family: $font-Montserrat;
+  line-height: 30px;
+  color: $color-light-black;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.deleteBtn {
+  padding: 12px 60px;
+  border-radius: 5px;
+  background-color: $color-space-blue;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+
+  margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.cancelBtn {
+  background-color: $color-white;
+  border-radius: 4px;
+  padding: 15px 49px;
+  color: $color-medium-blue;
+  font-weight: $fw-medium;
+  font-size: 14px;
+
+  &:hover {
+    background-color: $color-white;
+  }
+}

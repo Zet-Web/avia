@@ -1,0 +1,96 @@
+@use 'styles' as *;
+
+.tooltip {
+  color: white;
+  line-height: 1.3;
+  background-color: $color-space-blue;
+  padding: 5px 8px;
+  gap: 10px;
+  border-radius: 4px;
+  white-space: normal;
+  z-index: 999999;
+  font-size: 12px;
+  // &[data-position='bottom-start'],
+  // &[data-position='top-start'] {
+  //   transform: translate(-95%, 0);
+  // }
+
+  //   &[data-position='bottom-end'],
+  //   &[data-position='top-end'] {
+  //     transform: translate(95%, 0);
+  //   }
+
+  //   &[data-position='right-start'],
+  //   &[data-position='left-start'] {
+  //     transform: translate(0, -50%);
+  //   }
+
+  &[data-position='left-end'],
+  &[data-position='right-end'] {
+    transform: translate(0, 50%);
+  }
+}
+
+.tooltipArrow {
+  position: absolute;
+
+  &[data-position='top-end'] {
+    left: 0;
+    border-right: 1em solid transparent;
+    border-top: 0.8em solid $color-space-blue;
+  }
+
+  &[data-position='top-start'] {
+    right: 0;
+    border-left: 1em solid transparent;
+    border-top: 0.8em solid $color-space-blue;
+  }
+
+  &[data-position='bottom-start'] {
+    transform: translate(0%, -50%);
+    top: 0;
+    right: 0;
+    border-left: 1em solid transparent;
+    border-bottom: 0.8em solid $color-space-blue;
+  }
+
+  &[data-position='bottom-end'] {
+    transform: translate(0%, -50%);
+    top: 0;
+    left: 0;
+    border-right: 1em solid transparent;
+    border-bottom: 0.8em solid $color-space-blue;
+  }
+
+  &[data-position='left-start'] {
+    transform: translate(50%, 0);
+    right: 0;
+    bottom: 0;
+    border-right: 1em solid transparent;
+    border-bottom: 0.8em solid $color-space-blue;
+  }
+
+  &[data-position='left-end'] {
+    transform: translate(50%, 0);
+    top: 0;
+    right: 0;
+    border-right: 1em solid transparent;
+    border-top: 0.8em solid $color-space-blue;
+  }
+
+  &[data-position='right-start'] {
+    transform: translate(-50%, 0);
+    left: 0;
+    bottom: 0;
+    border-bottom: 1em solid $color-space-blue;
+    border-left: 0.8em solid transparent;
+  }
+
+  &[data-position='right-end'] {
+    transform: translate(-50%, 0);
+    top: 0;
+    left: 0;
+    border-top: 1em solid $color-space-blue;
+    border-left: 0.8em solid transparent;
+  }
+}

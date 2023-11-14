@@ -1,0 +1,62 @@
+@use 'styles' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.container h1 {
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: $color-light-black;
+  margin-bottom: 30px;
+
+  @include mobile-tablet {
+    margin-bottom: 20px;
+  }
+}
+.signUpForm {
+  width: 100%;
+}
+.inputContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input {
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-light-black;
+}
+.options {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.keepLogged {
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-medium-grey;
+
+  span {
+    margin-right: 10px;
+  }
+}
+.active {
+  color: $color-space-blue;
+}
+.signUpButton {
+  margin-top: 10px;
+  width: 100%;
+}

@@ -1,0 +1,80 @@
+@use 'styles' as *;
+
+.swiper {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  @include heading1;
+}
+
+.buttons {
+  display: flex;
+  margin: 0 -6px -2px 0;
+  gap: 14px;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.loadMoreContainer {
+  width: 100%;
+  margin-top: 40px;
+
+  border-top: 1px solid $color-medium-grey;
+}
+
+.loadMoreButton {
+  margin: 8px auto;
+
+  display: flex;
+  gap: 9px;
+
+  border: none;
+  background-color: $color-white;
+
+  font-weight: $fw-medium;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-medium-grey;
+  cursor: pointer;
+}
+
+.postsWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.posts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(154px, 1fr));
+  column-gap: 30px;
+  row-gap: 45px;
+  transition: all 0.5s;
+
+  @include mobile-tablet {
+    grid-template-columns: repeat(3, minmax(126px, 1fr));
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(2, minmax(166px, 1fr));
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.notResult {
+  color: $color-medium-grey;
+}

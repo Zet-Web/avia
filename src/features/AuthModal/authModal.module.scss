@@ -1,0 +1,83 @@
+@use 'styles' as *;
+
+.sideMenu {
+  div[class*='sideMenuContent'] {
+    padding: 0;
+    margin: 0 0 0 96px;
+    max-width: 370px;
+
+    @include laptop {
+      margin: 14px 0 0 80px;
+    }
+
+    @include big-tablet {
+      margin: 14px 39px 0 60px;
+      max-width: 390px;
+    }
+
+    @include mobile-tablet {
+      margin: 14px 0;
+      padding: 0 15px;
+      max-width: 100%;
+    }
+  }
+}
+.separator {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.separator span {
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-medium-grey;
+}
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid $color-light-grey;
+}
+.separator:before {
+  margin-right: 25px;
+}
+.separator:after {
+  margin-left: 25px;
+}
+.loginWith {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 28px;
+}
+.loginWith h1 {
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: $color-light-black;
+  margin-bottom: 12px;
+}
+.socialsWrapper {
+  display: flex;
+  padding-block: 4px;
+  gap: 32.5px;
+}
+.link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-light-black;
+  cursor: pointer;
+}
+.link a {
+  margin-left: 10px;
+}

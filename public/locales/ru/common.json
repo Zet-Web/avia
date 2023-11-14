@@ -1,0 +1,222 @@
+{
+  "example-page": {
+    "test": "тест"
+  },
+  "currency": {
+    "rub": "Российский рубль",
+    "eur": "Евро",
+    "usd": "Доллар США"
+  },
+  "words": {
+    "more": "еще",
+    "hide": "скрыть",
+    "offer_1": "предложение",
+    "offer_2": "предложения",
+    "offer_3": "предложений",
+    "add": "добавить",
+    "click": "нажать",
+    "ok": "ок",
+    "answer": "ответ",
+    "and": "или",
+    "confirm": "Подтвердить",
+    "flight": "рейс",
+    "flightCapitalize": "Рейс",
+    "search": "Искать",
+    "find": "Найти",
+    "login": "Войти",
+    "signUp": "Зарегестрироваться",
+    "reg": "Регистрация",
+    "save": "Сохранить",
+    "watch": "Смотреть",
+    "send": "Отправить",
+    "details": "Подробнее",
+    "free": "бесплатно",
+    "inWay": "в пути",
+    "from": "От",
+    "fromLower": "от",
+    "until": "До",
+    "untilLower": "до",
+    "days": "дней",
+    "airplanes": "Самолёты",
+    "trains": "Поезда",
+    "buses": "Автобусы",
+    "delete": "Удалить",
+    "noDelete": "Не удалять",
+    "babies": "Младенцы",
+    "children": "Дети",
+    "adults": "Взрослые",
+    "Economy": "Эконом",
+    "Business": "Бизнес",
+    "to": "от",
+    "up to": "до",
+    "years": "лет",
+    "clear": "очистить все",
+    "reset": "сбросить все",
+    "all": "Все",
+    "transfer": "пересадка",
+    "transplants": "Пересадки",
+    "not-chosen": "Не выбрано",
+    "transfers": {
+      "all": "Все",
+      "without": "Без пересадок",
+      "one": "1 пересадка",
+      "two": "2 пересадки",
+      "three_and_more": "3 и более пересадок"
+    },
+    "baggage": {
+      "with_baggage": "С багажом",
+      "not_baggage": "Без багажа",
+      "handbag": "бесплатно",
+      "free": {
+        "baggage": "с багажом",
+        "handbag": "без багажа"
+      }
+    },
+    "filters": "Фильтры",
+    "there": "Туда",
+    "back": "Обратно",
+    "departureFrom": "Отправление из",
+    "arrival": "Прибытие"
+  },
+  "inputs": {
+    "email": "Email",
+    "password": "Пароль",
+    "name": "Имя",
+    "surname": "Фамилия"
+  },
+  "directionInput": {
+    "from": "откуда",
+    "to": "куда"
+  },
+  "searchTickets": {
+    "title": "Ищем и сравниваем билеты на",
+    "plane": "самолёт",
+    "train": "поезд",
+    "bus": "автобус",
+    "dateDispatch": "дата вылета",
+    "chooseDate": "выберите дату",
+    "back": "обратно",
+    "passengersClass": "пассажиры и класс"
+  },
+  "tabsFormSearchTickets": {
+    "roundtrip": "Туда - обратно",
+    "oneWay": "В одну сторону",
+    "difficult": "Сложный маршрут"
+  },
+  "cityNoTransport": {
+    "text": "В этом городе нет аэропортов..."
+  },
+  "weekDay": {
+    "sun": "Вс.",
+    "mon": "Пн.",
+    "tue": "Вт.",
+    "wed": "Ср.",
+    "thu": "Чт.",
+    "fri": "Пт.",
+    "sat": "Сб."
+  },
+  "checkbox": {
+    "keepLogged": "Запомнить меня"
+  },
+  "months": {
+    "january": "января",
+    "february": "февраля",
+    "march": "марта",
+    "april": "апреля",
+    "may": "мая",
+    "june": "июня",
+    "July": "июля",
+    "august": "августа",
+    "september": "сентября",
+    "october": "октября",
+    "november": "ноября",
+    "december": "декабря"
+  },
+  "time": {
+    "m": "м",
+    "h": "ч",
+    "s": "с",
+    "seconds": "секунд",
+    "minute": "минута",
+    "minutes": "минут",
+    "hours": "часов",
+    "hour": "час"
+  },
+  "days": {
+    "Su": "Вс",
+    "Mo": "Пн",
+    "Tu": "Вт",
+    "We": "Ср",
+    "Th": "Чт",
+    "Fr": "Пт",
+    "Sa": "Сб"
+  },
+  "bestPrice": "лучшая цена",
+  "weekPrice": "Цены на неделю",
+  "goBack": "вернуться обратно",
+  "clearAllHistory": "очистить всю историю",
+  "cookieTitle": "Для Вашего удобства на данном сервисе Мы используем файлы cookie, для хранения данных. Продолжая использовать сервис, Вы даёте согласие на работу с этими данными.",
+
+  "errors": {
+    "wrongState": "Неправильное состояние",
+
+    "required": {
+      "name": "Введите имя",
+      "surname": "Введите фамилию",
+      "email": "Введите e-mail",
+      "password": "Введите пароль",
+      "repeatPassword": "Пожалуйста, повторите пароль"
+    },
+    "validate": {
+      "email": "Пожалуйста, введите действительный e-mail",
+      "repeatPassword": "Пароли не совпадают"
+    }
+  },
+  "ticket": {
+    "subscribedLine1": "Вы подписаны на уведомления об",
+    "aboutRaise": "О рейсе",
+    "subscribedLine2": "измеенении цены на этот билет",
+    "subscribeLine1": "Подписаться на уведомления об",
+    "subscribeLine2": "измеенении цены на этот билет",
+    "addToFavorites": "Добавить в избранное",
+    "addedToFavorites": "Добавленно в избранное",
+    "shareLink": "Поделиться ссылкой",
+    "aircraft": "Перевозчик",
+    "transport": "Транспорт",
+    "tripClass": "Класс"
+  },
+  "enum": {
+    "1": "Первая",
+    "2": "Вторая",
+    "3": "Третья",
+    "4": "Четвёртая",
+    "5": "Пятая",
+    "6": "Шестая"
+  },
+  "ticketFilter": {
+    "departureArrivalTime": "Время отправления и прибытия",
+    "timeWay": "Время в пути",
+    "timeTransfer": "Время пересадки",
+    "baggage": "Багаж",
+    "airlines": "Авиакомпании",
+    "airports": "Аэропорты",
+    "transferAirports": "Аэропорты пересадок",
+    "sellers": "Агентства"
+  },
+  "sort": {
+    "cheap": "Самый дешёвый",
+    "fast": "Самый быстрый",
+    "optimal": "Оптимальный"
+  },
+  "route": {
+    "category": {
+      "business": "Бизнес",
+      "economy": "Эконом"
+    },
+    "passengers": {
+      "0": "пассажир",
+      "1": "пассажира",
+      "2": "пассажиров"
+    }
+  }
+}

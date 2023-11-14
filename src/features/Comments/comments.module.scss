@@ -1,0 +1,32 @@
+@use 'styles' as *;
+
+.wraperComment {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  align-items: flex-end;
+  border-bottom: 1px solid $color-light-grey;
+}
+.comment {
+  width: 100%;
+  margin-top: 19px;
+  padding-bottom: 20px;
+
+  @include mobile {
+    padding-bottom: 15px;
+  }
+}
+
+.replyComment {
+  width: 100%;
+}
+.replyComment > * {
+  width: 90%;
+  margin-left: auto;
+}
+.line {
+  border: 0;
+  width: 100%;
+  border-bottom: 1px solid $color-light-grey;
+}

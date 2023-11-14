@@ -1,0 +1,109 @@
+@use 'styles' as *;
+
+.baner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+
+  padding: 23px;
+  border-radius: 5px;
+
+  background-position: center;
+  background-color: $color-space-blue;
+  background-image: url('/assets/images/DecorationForBaner.svg');
+  background-repeat: no-repeat;
+  color: $color-space-blue;
+
+  @media (max-width: 570px) {
+    flex-direction: column;
+    background-position: right 26px top 24px;
+    background-size: 70px;
+    padding: 28px 24px;
+    gap: 0;
+  }
+  &.forRecomend {
+    flex-direction: column;
+    background-position: right 26px top 24px;
+    background-size: 70px;
+    padding: 28px 24px;
+    gap: 0;
+  }
+}
+.logo {
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+
+  @media (max-width: 570px) {
+    position: relative;
+    overflow: visible;
+    visibility: visible;
+  }
+
+  .forRecomend & {
+    position: relative;
+    overflow: visible;
+    visibility: visible;
+  }
+}
+.content {
+  color: $color-white;
+}
+.title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: $fw-bold;
+  font-family: $font-Montserrat;
+  @media (max-width: 570px) {
+    padding-top: 49px;
+  }
+
+  .forRecomend & {
+    padding-top: 49px;
+  }
+}
+.subTitle {
+  font-size: 16px;
+  color: $color-bright-blue;
+
+  @media (max-width: 570px) {
+    max-width: 143px;
+    margin-bottom: 34px;
+  }
+  .forRecomend & {
+    max-width: 143px;
+    margin-bottom: 34px;
+  }
+}
+.btn {
+  max-width: 234px;
+  width: 100%;
+  border: none;
+  padding: 11px 0;
+  border-radius: 5px;
+  border: 1px solid #396ef6;
+  display: block;
+
+  text-align: center;
+  font-weight: $fw-medium;
+  font-family: $font-Inter;
+  font-size: 14px;
+
+  color: $color-medium-blue;
+  background: $color-white;
+  cursor: pointer;
+
+  @media (max-width: 570px) {
+    max-width: 100%;
+  }
+  .forRecomend & {
+    max-width: 100%;
+  }
+  &:hover {
+    background: $color-light-white;
+  }
+  &:active {
+    background: $color-white;
+  }
+}

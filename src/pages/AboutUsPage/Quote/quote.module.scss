@@ -1,0 +1,99 @@
+@use 'styles' as *;
+
+.wrapper {
+  padding: 35px 0 70px;
+}
+
+.container {
+  position: relative;
+
+  max-width: 900px;
+  padding: 30px 30px 0;
+  margin: 0 auto;
+
+  &::before {
+    content: '';
+
+    width: 48px;
+    height: 48px;
+
+    position: absolute;
+    top: -20px;
+    left: -30px;
+
+    background: url('/assets/images/quoteMark.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    @include mobile {
+      left: 0;
+      top: -40px;
+    }
+  }
+
+  @include mobile {
+    padding-left: 15px;
+  }
+}
+
+.title {
+  max-width: 550px;
+  margin-bottom: 20px;
+
+  font-family: $font-Montserrat;
+  font-size: 48px;
+  line-height: 1.25;
+  font-weight: $fw-bold;
+
+  @include mobile {
+    max-width: 270px;
+  }
+}
+
+.text {
+  margin-bottom: 40px;
+
+  font-weight: $fw-medium;
+  font-size: 18px;
+  line-height: 26px;
+  @include mobile {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+
+  &Name {
+    @include heading3;
+    color: $color-space-blue;
+    line-height: 1.44;
+  }
+
+  &Company {
+    line-height: 1.43;
+  }
+}
+
+@include tablet-laptop {
+  .container {
+    &::before {
+      left: 30px;
+    }
+  }
+}
+
+@include mobile {
+  .container {
+    &::before {
+      left: 15px;
+    }
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,84 @@
+@use 'styles' as *;
+
+.calendarContainer {
+  max-width: 770px;
+
+  display: flex;
+  flex-direction: column;
+
+  @include mobile-tablet {
+    max-width: 690px;
+    margin: 0 auto;
+    overflow-x: scroll;
+  }
+}
+.calendarHeader {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin: 20px 0 10px;
+
+  @include mobile-big-tablet {
+    gap: 3px;
+  }
+}
+.weekday {
+  width: 96px;
+  font-family: $font-Montserrat;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: $color-light-black;
+  flex-shrink: 0;
+}
+.calendarContent {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  @include mobile-big-tablet {
+    gap: 3px;
+  }
+}
+.calendarRow {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+.calendarDaysRow {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+
+  @include mobile-big-tablet {
+    gap: 3px;
+  }
+}
+.ticketRow {
+  display: flex;
+  justify-content: center;
+}
+.calendarMock {
+  background-color: $color-white;
+  border-radius: 4px;
+  border: 1px solid $color-light-grey;
+  width: 96px;
+  height: 56px;
+  padding: 9px 3px;
+}
+.calendarItem {
+  flex-shrink: 0;
+}
+.ticketSection {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @include mobile-tablet {
+    margin-top: 3px;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Редактирование профиля",
+  "changesSaved": "Изменения сохранены",
+  "placeholders": {
+    "name": "имя",
+    "surname": "Фамилия",
+    "email": "новый e-mail",
+    "password": "новый пароль",
+    "repeatPassword": "повторите пароль"
+  }
+}

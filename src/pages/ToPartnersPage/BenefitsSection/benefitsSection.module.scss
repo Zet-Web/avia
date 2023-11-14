@@ -1,0 +1,117 @@
+@use 'styles' as *;
+
+.wrapper {
+  padding: 70px 0 35px;
+
+  @include big-tablet {
+    padding: 50px 0 31px;
+  }
+
+  @include mobile-tablet {
+    padding: 50px 0 30px;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  @include container;
+
+  @include mobile-tablet {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+.titleContent {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 0.8;
+
+  @include laptop {
+    max-width: 400px;
+  }
+
+  @include big-tablet {
+    max-width: 310px;
+  }
+
+  @include mobile-tablet {
+    max-width: none;
+    margin-bottom: 30px;
+  }
+}
+.title {
+  font-family: $font-Montserrat;
+  font-style: normal;
+  font-weight: $fw-bold;
+  font-size: 36px;
+  line-height: 44px;
+  color: $color-light-black;
+}
+.titleText {
+  font-family: $font-Inter;
+  font-style: normal;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-space-grey;
+  margin-top: 30px;
+}
+
+.cardList {
+  max-width: 570px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 40px;
+  flex: 1;
+
+  @include laptop {
+    max-width: 450px;
+  }
+
+  @include big-tablet {
+    max-width: 330px;
+    gap: 30px;
+  }
+
+  @include mobile-tablet {
+    max-width: none;
+    gap: 20px;
+  }
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.cardIcon {
+  display: flex;
+  flex: 0 0 auto;
+}
+.cardContent {
+  margin-left: 30px;
+}
+.cardTitle {
+  font-family: $font-Montserrat;
+  font-style: normal;
+  font-weight: $fw-bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: $color-light-black;
+}
+.cardText {
+  font-family: $font-Inter;
+  font-style: normal;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-medium-grey;
+  margin-top: 10px;
+}

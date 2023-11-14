@@ -1,0 +1,96 @@
+@use 'styles' as *;
+
+.wrapper {
+  .container {
+    max-width: 1030px;
+
+    @include mobile-tablet {
+      padding: 0 15px;
+    }
+  }
+
+  .tags {
+    cursor: pointer;
+    font-family: $font-Montserrat;
+    font-size: 16px;
+    font-weight: $fw-regular;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+  }
+
+  span {
+    color: $color-medium-grey;
+    cursor: pointer;
+  }
+
+  .activetrue {
+    font-family: $font-Inter;
+    font-weight: $fw-medium;
+    background-color: $color-medium-blue;
+    color: $color-white;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .activefalse:hover {
+    color: $color-space-grey;
+  }
+}
+
+.hideTags {
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  color: red;
+  flex-direction: column;
+  gap: 5px;
+  left: -20px;
+  background-color: $color-white;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px 25px;
+  z-index: 10;
+
+  @include mobile-tablet {
+    left: -120px;
+  }
+
+  @include mobile {
+    left: -80px;
+    padding: 20px 10px 10px 7px;
+  }
+}
+
+.elipse {
+  display: inline;
+  position: relative;
+}
+
+.elipse:hover .hideTags {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tag {
+  margin-bottom: 10px;
+  display: flex;
+  padding: 8px 12px;
+  font-weight: $fw-regular;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: $color-medium-grey;
+  border: 1px solid $color-light-grey;
+  border-radius: 5px;
+  margin-right: 16px;
+}
+
+.tag:not(:first-child)::before {
+  content: '#';
+}

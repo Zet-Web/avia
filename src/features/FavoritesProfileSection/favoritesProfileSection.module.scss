@@ -1,0 +1,32 @@
+@use 'styles' as *;
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @include mobile-tablet {
+    justify-content: space-between;
+  }
+}
+
+.title {
+  display: none;
+  margin-right: auto;
+
+  @include heading1;
+
+  @include mobile-tablet {
+    display: block;
+  }
+}
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  color: $color-medium-grey;
+  @include mobile-tablet {
+    margin-top: 20px;
+  }
+}

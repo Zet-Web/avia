@@ -1,0 +1,49 @@
+@use 'styles' as *;
+
+.body {
+  max-width: 506px;
+  max-width: 508px;
+  padding: 28px;
+}
+
+.title {
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 24px;
+
+  line-height: 30px;
+  color: $color-light-black;
+}
+
+.text {
+  margin-top: 10px;
+  margin-bottom: 16px;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  color: $color-medium-grey;
+  line-height: 20px;
+}
+
+.buttons {
+  margin-top: 16px;
+}
+.deleteBtn {
+  min-width: 226px;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 12px 84px;
+  background-color: $color-space-blue;
+}
+
+.cancelBtn {
+  min-width: 226px;
+  padding: 12px 74px;
+  border-radius: 4px;
+  color: $color-medium-blue;
+  background-color: $color-white;
+
+  &:hover {
+    background-color: $color-light-blue;
+    color: $color-white;
+  }
+}

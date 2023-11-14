@@ -1,0 +1,12 @@
+{{- if .Values.pgCluster.enabled -}}
+{{- $fullName := .Chart.Name -}}
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: {{ $fullName }}-pg
+spec:
+  instances: {{ .Values.pgCluster.instances }}
+  storage:
+    storageClass: openebs-hostpath
+    size: {{ .Values.pgCluster.storage.size }}
+{{- end }}

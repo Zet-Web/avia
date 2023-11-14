@@ -1,0 +1,126 @@
+@use 'styles' as *;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  @include container;
+  @include mobile-tablet {
+    padding: 0 39px;
+  }
+  @include mobile {
+    padding: 0 15px;
+  }
+}
+.contentTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .title {
+    font-family: $font-Montserrat;
+    font-weight: $fw-bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: $color-light-black;
+  }
+  .subtitle {
+    font-family: $font-Inter;
+    font-weight: $fw-medium;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-light-black;
+    width: 100%;
+    max-width: 570px;
+  }
+}
+.title {
+  width: 100%;
+  max-width: 400px;
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 24px;
+  padding-right: 45px;
+  line-height: 30px;
+  color: $color-light-black;
+  @include mobile-big-tablet {
+    max-width: 320px;
+  }
+  @include mobile-tablet {
+    br {
+      display: none;
+    }
+    max-width: none;
+    padding: 0;
+  }
+}
+
+.questionBox {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @include mobile-tablet {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.questionBoxContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 770px;
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-light-black;
+  .bottomContent {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .title {
+      font-family: $font-Montserrat;
+      font-style: normal;
+      font-weight: $fw-bold;
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}
+.advantages {
+  display: flex;
+  .numberAdvantage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    font-family: $font-Montserrat;
+    font-style: normal;
+    font-weight: $fw-bold;
+    font-size: 64px;
+    line-height: 80px;
+    color: $color-light-grey;
+    @media (max-width: 560px) {
+      flex-direction: row;
+      align-items: center;
+    }
+    .numberTitle {
+      text-transform: uppercase;
+      font-family: $font-Montserrat;
+      font-style: normal;
+      font-weight: $fw-bold;
+      font-size: 18px;
+      line-height: 26px;
+      color: $color-space-blue;
+    }
+    .number {
+      width: 99px;
+    }
+  }
+  @media (max-width: 560px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

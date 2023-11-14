@@ -1,0 +1,727 @@
+@use 'styles' as *;
+
+.parent {
+  position: relative;
+}
+.applyBtn {
+  width: 95%;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.wrapper {
+  @include container;
+
+  &.fullHeight {
+    padding-top: 80px;
+    padding-bottom: 128 px;
+
+    @include big-tablet {
+      padding-top: 40px;
+      padding-bottom: 180px;
+    }
+
+    @include tablet {
+      padding-top: 50px;
+      padding-bottom: 130px;
+    }
+
+    @include mobile {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.tabs {
+  display: flex;
+  width: fit-content;
+  background-color: $color-medium-blue;
+  border-radius: 5px;
+  padding: 4px;
+  margin-bottom: 10px;
+  font-family: $font-Inter;
+  font-size: 14px;
+  font-weight: $fw-bold;
+  line-height: 20px;
+
+  @include mobile {
+    width: fit-content;
+    padding: 2px;
+  }
+}
+
+.tab {
+  border-radius: 5px;
+  padding: 6px 30px;
+  color: $color-bright-blue;
+  font-weight: $fw-bold;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  @include mobile {
+    padding: 6px 5.5px;
+    font-family: $font-Inter;
+    font-size: 12px;
+    font-weight: $fw-bold;
+    line-height: 16px;
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+}
+
+.tab.active {
+  background-color: $color-white;
+  color: $color-medium-blue;
+}
+
+.inputWrapper {
+  border: 1px solid $color-white;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 2.1fr 3fr 0.8fr;
+  gap: 1px;
+
+  @include mobile-big-tablet {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  @include mobile-tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+  }
+}
+
+.difficultInputWrapper {
+  position: relative;
+  border: 1px solid $color-white;
+  border-left: 0;
+  border-radius: 0 0 4px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+
+  @include mobile-tablet {
+    border: none;
+    gap: 10px;
+  }
+}
+
+.addField {
+  color: $color-space-blue;
+
+  background: $color-white;
+  border-radius: 0;
+
+  &:hover {
+    background: $color-white;
+  }
+
+  @include tablet {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.inputArray {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+
+  @include mobile-tablet {
+    gap: 10px;
+  }
+}
+
+.difficultInput {
+  position: relative;
+}
+
+.difficultInputWrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1px;
+
+  @include mobile-tablet {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include mobile-tablet {
+    &::before {
+      border-radius: 8px;
+      border: 4px solid $color-space-blue;
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      display: block;
+      width: calc(100% + 8px);
+      height: calc(100% + 8px);
+      z-index: 1;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+  }
+}
+
+.removeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+  transform: translate(50%, -50%) scale(0.7);
+
+  width: 25px;
+  height: 25px;
+
+  padding: 3px;
+
+  cursor: pointer;
+  border: none;
+  background: $color-accent-red;
+  border-radius: 50%;
+}
+
+.removeIcon {
+  min-width: 100%;
+  min-height: 100%;
+
+  fill: $color-white;
+}
+
+.difficultInputSubmit {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
+
+  @include mobile-tablet {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  @include mobile-tablet {
+    &::before {
+      border-radius: 8px;
+      border: 4px solid $color-space-blue;
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      display: block;
+      width: calc(100% + 8px);
+      height: calc(100% + 8px);
+      z-index: 1;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+  }
+}
+
+.input {
+  padding: 25px 15px 11px 15px;
+
+  font-weight: $fw-medium;
+  font-size: 16px;
+
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+
+  @include mobile {
+    height: auto;
+    padding: 20px 0 6px 15px;
+    line-height: 24px;
+  }
+}
+
+.placeholder {
+  left: 15px;
+  color: $color-space-blue;
+}
+
+.input:focus + .placeholder,
+.input:not(:placeholder-shown) + .placeholder {
+  color: $color-medium-grey;
+}
+
+.additional {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1px;
+  background: transparent;
+
+  @media (min-width: 521px) {
+    height: 60px;
+  }
+
+  @include big-tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include mobile {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 0.5fr;
+  }
+}
+
+.btn {
+  @include mobile {
+    height: 100%;
+    padding: 15px;
+  }
+}
+
+.btnSearhTickets {
+  @include mobile-tablet {
+    border: 1px solid white;
+    border-radius: 0 0 4px 4px;
+    margin-top: -1px;
+  }
+}
+
+.checkbox {
+  color: $color-white;
+}
+
+.calendarInputWrapper {
+  position: relative;
+}
+
+.passengersInput {
+  & > input {
+    height: 60px;
+  }
+  position: relative;
+}
+
+.dateInputGroup {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background: $color-space-blue;
+  gap: 1px;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    color: $color-medium-grey;
+  }
+}
+
+.dateInput {
+  border: none;
+  outline: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mobile {
+    max-height: 50px;
+  }
+
+  padding-top: 30px;
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: $fw-medium;
+  font-family: $font-Inter;
+
+  text-transform: capitalize;
+
+  @include mobile {
+    height: 50px;
+  }
+}
+
+.dateError {
+  color: $color-accent-red;
+}
+
+.modalDateGroup {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid $color-space-blue;
+
+  .input {
+    border-bottom: 1px solid $color-space-blue;
+  }
+}
+
+.difficultInputPopper {
+  z-index: 5;
+}
+
+.popper {
+  left: -100px !important;
+  z-index: 5 !important;
+
+  @include big-tablet {
+    left: 0 !important;
+  }
+  @include tablet {
+    left: 0 !important;
+  }
+}
+
+.popperRight {
+  z-index: 5 !important;
+
+  @include laptop-desktop {
+    left: -200px !important;
+  }
+
+  @include big-tablet {
+    left: -184px !important;
+  }
+
+  @include tablet {
+    left: -25px !important;
+  }
+
+  [class*='react-datepicker__day--outside-month'] {
+    pointer-events: none !important;
+    background-color: transparent !important;
+  }
+
+  [class='react-datepicker__triangle']::after,
+  [class='react-datepicker__triangle']::before {
+    @include big-tablet {
+      left: -30px !important;
+    }
+
+    @include tablet {
+      left: -200px !important;
+    }
+  }
+}
+
+.popperLeft {
+  [class='react-datepicker__triangle']::after,
+  [class='react-datepicker__triangle']::before {
+    @include big-tablet {
+      left: -200px !important;
+    }
+
+    @include tablet {
+      left: -200px !important;
+    }
+  }
+
+  @include laptop-desktop {
+    left: -200px !important;
+  }
+}
+
+.picker {
+  height: 60px;
+  width: 100%;
+
+  [class='react-datepicker-popper'] {
+    width: 100%;
+    z-index: 5;
+  }
+  [class='react-datepicker__tab-loop'] {
+    position: absolute;
+    z-index: 2;
+    left: -20%;
+  }
+
+  [class='react-datepicker'] {
+    // min-width: 375px;
+    width: 100%;
+    display: flex;
+
+    @media (max-width: 620px) {
+      flex-direction: column;
+    }
+  }
+
+  [class='react-datepicker__triangle']::after,
+  [class='react-datepicker__triangle']::before {
+    border-bottom-color: $color-white !important;
+  }
+
+  .triangleCenter [class='react-datepicker__triangle'] {
+    left: 35% !important;
+  }
+
+  [class='react-datepicker__triangle']:after {
+    border-bottom-color: $color-white;
+  }
+
+  [class*='react-datepicker__day'] {
+    margin: 0;
+    padding-top: 5px;
+    width: 36px;
+    min-height: 36px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: $fw-regular;
+    &:hover {
+      color: $color-white !important;
+      background: $color-space-blue;
+    }
+  }
+
+  [class*='react-datepicker__day--keyboard-selected'] {
+    background: $color-white;
+    color: $color-black;
+  }
+
+  [class*='react-datepicker__day--in-selecting-range'],
+  [class*='react-datepicker__day--in-range'] {
+    border-radius: unset;
+    background-color: $color-light-blue !important;
+    color: $color-white !important;
+  }
+
+  [class*='react-datepicker__day--selected'],
+  [class*='react-datepicker__day--selecting-range-start'] {
+    background-color: $color-space-blue !important;
+    color: $color-white !important;
+  }
+
+  [class*='react-datepicker__day--selected react-datepicker__day--in-selecting-range'] {
+    border-radius: 2px 0 0 2px;
+  }
+
+  [class*='react-datepicker__day--range-end'] {
+    border-radius: 0 2px 2px 0;
+  }
+
+  [class*='react-datepicker__current-month'] {
+    text-transform: capitalize;
+  }
+
+  [class='react-datepicker__month-container'] {
+    padding: 20px;
+
+    [class*='react-datepicker__month'] {
+      margin: 0;
+    }
+  }
+
+  [class*='react-datepicker__navigation'] {
+    transform: scale(0.9);
+
+    // @media (max-width: 620px) {
+    //   display: none;
+    // }
+  }
+
+  [class*='react-datepicker__navigation--previous'] {
+    left: 20px;
+    top: 20px;
+  }
+
+  [class*='react-datepicker__navigation--next'] {
+    right: 20px;
+    top: 20px;
+  }
+
+  [class='react-datepicker__header '] {
+    padding: 5px 0 0 0;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border-bottom: unset;
+
+    [class='react-datepicker__current-month'] {
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: $color-black;
+      font-weight: $fw-medium;
+    }
+  }
+
+  [class='react-datepicker__input-container '] {
+    display: flex;
+
+    label:not(:last-child) {
+      border-right: 1px solid $color-space-blue;
+    }
+  }
+
+  [class='react-datepicker__day-name']:first-letter {
+    text-transform: uppercase;
+  }
+
+  [class='react-datepicker__day-name'] {
+    color: $color-space-blue;
+    font-weight: $fw-medium;
+    &:hover {
+      background: $color-white;
+      color: $color-space-blue !important;
+    }
+  }
+
+  [class='react-datepicker__day-names'] {
+    &:hover {
+      background: $color-white;
+      color: $color-space-blue;
+    }
+  }
+
+  [class='react-datepicker__week'] {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  [class*='react-datepicker__day--outside-month'] {
+    background: $color-white !important;
+    color: $color-medium-grey !important;
+    cursor: default !important;
+    pointer-events: none;
+  }
+
+  [class*='react-datepicker__day--disabled'] {
+    color: $color-medium-grey !important;
+    pointer-events: none;
+  }
+
+  @include mobile {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.passengersPopup {
+  left: none;
+  right: 0;
+}
+
+.collapseBtn {
+  display: block;
+  margin: -5px auto -15px;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.tabContent {
+  margin-bottom: 15px;
+}
+
+.calendarOverlay {
+  div[class*='modalContainer'] {
+    width: 100%;
+    max-width: 375px;
+
+    padding: 0 15px;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  button[class*='closeBtn'] {
+    padding: 0;
+  }
+  @media (max-width: 620px) {
+    [class='react-datepicker__month-container'] {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    [class='react-datepicker__day-names'] {
+      width: fit-content;
+    }
+  }
+}
+
+.saveDate {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999999;
+
+  width: 100%;
+  max-width: 290px;
+}
+
+.transportTabsWrapper {
+  margin-bottom: 25px;
+
+  @include big-tablet {
+    margin-bottom: 45px;
+  }
+
+  @include tablet {
+    margin-bottom: 35px;
+  }
+
+  @include mobile {
+    margin-bottom: 15px;
+  }
+}
+
+.transportTabs {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.transportTab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  font-family: $font-Inter;
+  @include text-small;
+  color: $color-medium-blue;
+
+  border: none;
+  background: none;
+  fill: $color-medium-blue;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &.active {
+    color: $color-white;
+
+    fill: $color-white;
+  }
+}
+
+.transportIcon {
+  width: 44px;
+  height: 46px;
+
+  fill: inherit;
+}
+
+.title {
+  max-width: 411px;
+
+  margin-bottom: 20px;
+
+  @include heading1;
+  line-height: 1.22;
+  color: $color-white;
+
+  @include mobile {
+    max-width: 270px;
+  }
+}

@@ -1,0 +1,101 @@
+@use 'styles' as *;
+
+.container {
+  background: $color-white;
+  padding: 8px 16px;
+  @include shadow-input;
+
+  @media (min-width: 768px) {
+    padding: 12px 14px;
+  }
+}
+.clickable {
+  cursor: pointer;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
+.routeInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+
+  @include mobile-tablet {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+  }
+}
+.route {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  font-family: $font-Inter;
+  font-style: normal;
+  font-weight: $fw-bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-light-black;
+}
+.info {
+  display: flex;
+  gap: 5px;
+
+  font-family: $font-Inter;
+  font-style: normal;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+
+  @include mobile-tablet {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+.date {
+  color: $color-light-black;
+  margin: 0 30px;
+
+  @include mobile-tablet {
+    margin: 0 5px 0 0;
+  }
+}
+.params {
+  color: $color-medium-grey;
+
+  @include mobile-tablet {
+    margin: 0;
+  }
+}
+.arrow {
+  fill: $color-space-blue;
+  margin: 0 5px;
+}
+.cross {
+  width: 16px;
+  height: 16px;
+
+  cursor: pointer;
+
+  svg {
+    stroke: $color-black;
+  }
+}
+
+.additional {
+  font-weight: $fw-bold;
+  color: $color-space-blue;
+  padding: 0 10px;
+  cursor: pointer;
+}

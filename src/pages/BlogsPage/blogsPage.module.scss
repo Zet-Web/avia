@@ -1,0 +1,64 @@
+@use 'styles' as *;
+
+.wrapperBlog {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 35px;
+}
+
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  @include container;
+  // margin-top: 42px;
+  margin: 40px 0 38px 0;
+
+  height: 60px;
+
+  @include mobile {
+    height: 50px;
+    margin-bottom: 28px;
+  }
+}
+
+.buttonSearch {
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  z-index: 0;
+  background: url('../../../public/assets/images/icons/search.png') no-repeat $color-medium-blue;
+  background-size: 24px 24px;
+  background-position: center;
+
+  @include mobile {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.content {
+  margin: 0 0 58px 0;
+  width: 100%;
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.staticContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include mobile {
+    gap: 0;
+  }
+}
+
+.title::first-letter {
+  text-transform: uppercase !important;
+}

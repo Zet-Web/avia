@@ -1,0 +1,95 @@
+@use 'styles' as *;
+
+.profileLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 970px;
+
+  &.large {
+    max-width: 1070px;
+  }
+
+  @include mobile-big-tablet {
+    gap: 0;
+  }
+}
+.header {
+  width: 100%;
+  max-width: 970px;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  @include mobile-big-tablet {
+    display: none;
+  }
+
+  &.large {
+    max-width: 1070px;
+  }
+}
+
+.profileContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  @include mobile-tablet {
+    flex-direction: column;
+  }
+}
+.sidebar {
+  width: 100%;
+  max-width: 270px;
+  display: flex;
+  flex-direction: column;
+  @include laptop {
+    max-width: 290px;
+  }
+  @include mobile-big-tablet {
+    display: none;
+  }
+}
+.content {
+  width: 100%;
+  max-width: 670px;
+  display: flex;
+  flex-direction: column;
+  &.large {
+    max-width: 770px;
+  }
+
+  @include mobile-big-tablet {
+    max-width: none;
+    &.large {
+      max-width: none;
+    }
+  }
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: $fw-bold;
+  @include font-size(14px);
+  border: none;
+  background: none;
+  height: fit-content;
+  color: $color-accent-red;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+}
+.iconLogout {
+  width: 14px;
+  height: 14px;
+  background: url('../../../public/assets/images/e.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}

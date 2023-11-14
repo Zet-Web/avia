@@ -1,0 +1,80 @@
+@use 'styles' as *;
+
+.body {
+  background-color: inherit;
+  box-shadow: none;
+  border-radius: none;
+}
+
+.content {
+  background-color: $color-white;
+  @include shadow-input;
+  padding: 50px 30px 15px;
+  width: 600px;
+  div[class*='tabs_container'] {
+    align-items: flex-start;
+  }
+  div[class*='tabs_tabs'] {
+    max-width: 290px;
+  }
+  button[class*='tab'] {
+    max-width: 145px;
+  }
+}
+.content h1 {
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 36px;
+  line-height: 44px;
+  color: $color-light-black;
+  margin-bottom: 5px;
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+.bottomText {
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-bright-blue;
+  margin-top: 15px;
+}
+.tabContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.tabContent {
+  div[class*='container'] {
+    margin: 0;
+  }
+}
+// TODO Add styles for Index feature when it done, if it necessary
+.message {
+  margin-top: 5px;
+  font-family: $font-Montserrat;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 17px;
+  color: $color-light-black;
+}
+.watchButton {
+  margin-top: 35px;
+  max-width: 200px;
+  font-family: $font-Montserrat;
+  font-weight: $fw-bold;
+  font-size: 18px;
+  line-height: 26px;
+}
+.unsubscribe {
+  margin-top: 53px;
+  font-family: $font-Inter;
+  font-weight: $fw-medium;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-space-blue;
+  cursor: pointer;
+}

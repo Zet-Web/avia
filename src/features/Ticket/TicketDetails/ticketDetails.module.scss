@@ -1,0 +1,23 @@
+@use 'styles' as *;
+
+.ticketDetail {
+  width: 100%;
+  background-color: $color-white;
+  padding-bottom: 16px;
+
+  @include mobile-tablet {
+    padding-bottom: 31px;
+  }
+
+  @include mobile {
+    padding-bottom: 16px;
+  }
+}
+
+.flight_transfer {
+  padding: 0 15px;
+  margin-top: 16px;
+  @include mobile {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,47 @@
+@use 'styles' as *;
+
+.modalWrapper {
+    background-color: $color-white;
+    width: 720px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+}
+
+.loading {
+    width: 48px;
+    height: 48px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+}
+
+.logo {
+    position: relative;
+    width: 112px;
+}
+
+.title {
+    color: $color-light-black;
+    font-weight: $fw-medium;
+    font-family: $font-Montserrat;
+    @include font-size(36px);
+    
+    span {
+        font-weight: $fw-bold;
+    }
+    
+    @include mobile-tablet {
+        @include font-size(24px);
+    }
+    
+    @include mobile {
+        @include font-size(18px);
+    }
+}

@@ -1,0 +1,269 @@
+@use 'styles' as *;
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  margin-top: 28px;
+  margin-bottom: 25px;
+  font-family: $font-Montserrat;
+  font-size: 24px;
+  font-weight: $fw-bold;
+  line-height: 30px;
+}
+
+.wrap {
+  position: relative;
+  @include shadow-input;
+}
+
+.flightInfoCard {
+  width: 100%;
+  border-radius: 4px;
+  background-color: $color-white;
+  overflow: hidden;
+
+  font-family: $font-Inter;
+  font-size: 12px;
+  font-weight: $fw-regular;
+  line-height: 16px;
+  text-align: left;
+
+  position: relative;
+  z-index: 1;
+}
+.leftSide {
+  padding: 5px 15px;
+  width: 100%;
+
+  @include mobile {
+    min-width: 200px;
+  }
+}
+
+.rightSide {
+  max-width: 123px;
+  width: 100%;
+}
+
+.flightInfoCardMobile {
+  margin-top: 30px;
+  margin-bottom: 16px;
+  box-shadow: 0px 0px 15px rgba(24, 50, 115, 0.1);
+  border-radius: 5px;
+}
+
+// card head
+.head {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $color-light-grey;
+}
+.headWrap {
+  display: flex;
+  align-items: center;
+  gap: 85px;
+  @include mobile {
+    gap: 25px;
+  }
+}
+
+.time {
+  max-width: 70px;
+  min-width: 70px;
+  width: 100%;
+  margin-right: 35px;
+
+  font-size: 12px;
+  font-weight: $fw-regular;
+  line-height: 16px;
+  text-align: left;
+
+  display: flex;
+  position: relative;
+
+  @include mobile {
+    max-width: 40px;
+    width: 40px;
+  }
+}
+.logo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.union {
+  position: absolute;
+  left: 60px;
+  top: 5px;
+  height: 140%;
+
+  svg {
+    fill: $color-medium-grey;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+.unionLong {
+  display: none;
+
+  @include mobile {
+    display: block;
+    position: absolute;
+    left: -35px;
+    top: 5px;
+    height: 420%;
+    width: 5px;
+    svg {
+      fill: $color-medium-grey;
+    }
+  }
+}
+
+// card middle
+.middle {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $color-light-grey;
+}
+.infoWrap {
+  display: flex;
+  width: 100%;
+
+  @include mobile {
+    display: block;
+    padding-left: 45px;
+  }
+}
+
+.info {
+  font-size: 12px;
+  font-weight: $fw-bold;
+  line-height: 16px;
+  text-align: left;
+  span {
+    font-size: 12px;
+    font-weight: $fw-medium;
+    line-height: 16px;
+    text-align: left;
+    color: $color-medium-grey;
+  }
+}
+
+.departureInfo,
+.arrivalInfo {
+  display: flex;
+  margin: 5px 0;
+}
+.departureInfo,
+.departureDate {
+  margin-bottom: 5px;
+  @include mobile {
+    margin-bottom: 15px;
+  }
+}
+.departureDate,
+.arrivalDate {
+  @include mobile {
+    min-width: 80px;
+    text-align: right;
+  }
+}
+
+.arrivalDate,
+.departureDate {
+  width: 130px;
+}
+
+// card footer
+
+.footer {
+  display: flex;
+  align-items: center;
+
+  @include mobile {
+    display: block;
+  }
+}
+.footerWrap {
+  display: flex;
+  align-items: center;
+  min-height: 20px;
+  flex-grow: 1;
+
+  @include mobile {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 8px;
+  }
+}
+.carryonWrap,
+.baggageWrap {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding-left: 15px;
+
+  svg {
+    fill: $color-medium-grey;
+  }
+
+  @include mobile {
+    width: 100%;
+    &:first-child {
+      margin-bottom: 12px;
+    }
+  }
+}
+.carryon,
+.baggage {
+  font-family: $font-Inter;
+  font-size: 12px;
+  font-weight: $fw-regular;
+  line-height: 16px;
+  text-align: left;
+  margin-left: 10px;
+
+  span {
+    color: $color-medium-grey;
+  }
+}
+.icon,
+.baggageOrCarryonTrue {
+  display: flex;
+  align-items: center;
+}
+.baggageOrCarryonTrue {
+  svg {
+    fill: $color-black;
+  }
+}
+
+.buttonDetail {
+  height: 32px;
+  @include mobile {
+    height: 28px;
+  }
+}
+.button {
+  font-size: 14px;
+  font-weight: $fw-medium;
+  line-height: 20px;
+  background-color: $color-blue-alice;
+  color: $color-medium-blue;
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.infoOpened {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
